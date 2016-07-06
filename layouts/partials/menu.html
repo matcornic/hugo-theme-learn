@@ -3,11 +3,7 @@
     <div id="header">
       {{ partial "logo.html" . }}
       {{ if .Site.Params.search }}
-      <div class="searchbox">
-        <label for="search-by"><i class="fa fa-search"></i></label>
-        <input id="search-by" type="text" placeholder="Search Documentation" data-search-input="/lunr.json/query">
-        <span data-search-clear=""><i class="fa fa-close"></i></span>
-      </div>
+        {{ partial "search.html" . }}
       {{ end }}
     </div>
 </div>

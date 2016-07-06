@@ -1,0 +1,114 @@
+<div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input id="search-by" type="text" placeholder="Search Documentation">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/js/lunr.min.js"></script>
+<script type="text/javascript" src="/js/horsey.js"></script>
+<script type="text/javascript">
+    var lunrIndex,
+        pagesIndex;
+
+    // Initialize lunrjs using our generated index file
+    function initLunr() {
+        // First retrieve the index file
+        $.getJSON("/json/search.json")
+            .done(function(index) {
+                pagesIndex = index;
+                console.log("index:", pagesIndex);
+
+                // Set up lunrjs by declaring the fields we use
+                // Also provide their boost level for the ranking
+                lunrIndex = lunr(function() {
+                    this.field("title", {
+                        boost: 15
+                    });
+                    this.field("tags", {
+                        boost: 10
+                    });
+                    this.field("content", {
+                        boost: 5
+                    });
+
+                    // ref is the result item identifier (I chose the page URL)
+                    this.ref("uri");
+                });
+
+                // Feed lunr with each file and let lunr actually index them
+                pagesIndex.forEach(function(page) {
+                    lunrIndex.add(page);
+                });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.error("Error getting Hugo index flie:", err);
+            });
+    }
+
+    /**
+     * Trigger a search in lunr and transform the result
+     *
+     * @param  {String} query
+     * @return {Array}  results
+     */
+    function search(query) {
+        // Find the item in our index corresponding to the lunr one to have more info
+        // Lunr result: 
+        //  {ref: "/section/page1", score: 0.2725657778206127}
+        // Our result:
+        //  {title:"Page1", href:"/section/page1", ...}
+        return lunrIndex.search(query).map(function(result) {
+                return pagesIndex.filter(function(page) {
+                    return page.uri === result.ref;
+                })[0];
+            });
+    }
+
+    // Let's get started
+    initLunr();
+    $( document ).ready(function() {
+        horsey($("#search-by").get(0), {
+            suggestions: function (value, done) {
+                var query = $("#search-by").val();
+                if (query.length < 3) {
+                    done([]);
+                } else {
+                    var results = search(query);
+                    console.log(results);
+                    done(results);
+                }
+            },
+            filter: function (q, suggestion) {
+                return true;
+            },
+            set: function (value) {
+                location.href=value.href;
+            },
+            render: function (li, suggestion) {
+                var uri = suggestion.uri.substring(1,suggestion.uri.length);
+                var indexOfIndex = uri.lastIndexOf("/index");
+                if (indexOfIndex == -1) {
+                    indexOfIndex = uri.length;
+                }
+                var href = uri.substring(uri.indexOf("/"), indexOfIndex);
+                suggestion.href = href;
+                
+                
+                var query = $("#search-by").val();
+                var numWords = 2;
+                var text = suggestion.content.match("(?:\\s?(?:[\\w]+)\\s?){"+numWords+"}"+query+"(?:\\s?(?:[\\w]+)\\s?){"+numWords+"}");
+                suggestion.context = text;
+                var image = '<div>' + '» ' + suggestion.title + '</div><div style="font-size:12px">' + suggestion.context +'</div>';
+                li.innerHTML = image;
+            },
+            limit: 10
+        });
+        
+        $("#search-by").on("horsey-selected", function (a, b){
+           console.log(a); 
+           console.log(a); 
+        });
+
+    });
+    
+    </script>
