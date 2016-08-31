@@ -16,8 +16,30 @@
   <div class="highlightable">
     <ul class="topics">
       {{ $page := . }}
-      {{ range $key , $value := .Site.Sections }}
+      {{ if .Site.Params.menu }}
+        {{ $.Scratch.Set "menuItems" (slice) }}
+        {{ range $i, $key := .Site.Params.menu }}
+          {{ if isset $page.Site.Sections $key }}
+            {{ $.Scratch.Add "menuItems" $key }}
+          {{ else }}
+            <li class="dd-item"><div class="notices warning"><p>
+            {{ printf "Unknown section '%s' found in site menu" $key }}
+            </p></div></li>
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ $.Scratch.Set "menuItems" .Site.Sections }}
+      {{ end }}
+      {{ $menuItems := $.Scratch.Get "menuItems" }}
+      {{ range $i, $key := $menuItems }}
       {{ if ne $key "" }}
+
+      {{ if not $.Site.Params.menu }}
+        {{ $.Scratch.Set "currentItem" (index $page.Site.Sections $i) }}
+      {{ else }}
+        {{ $.Scratch.Set "currentItem" (index $page.Site.Sections $key) }}
+      {{ end }}
+      {{ $value := $.Scratch.Get "currentItem" }}
       {{ $first := (index $value 0).Page }}
 
       <li class="dd-item {{ if eq $page.RelPermalink $first.RelPermalink }}active{{ end }} {{if in $page.RelPermalink $first.RelPermalink }}parent{{ end }}" data-nav-id="{{ $first.RelPermalink }}">
@@ -32,13 +54,13 @@
              {{ end }}
            </span>
         </a>
-        {{ if gt .Pages.Len 1}}
+        {{ if gt $value.Len 1}}
         <ul>
-          {{ range $k, $p := .Pages }}
+          {{ range $k, $p := $value }}
           {{ if gt $k 0 }}
-            <li class="dd-item {{ if eq $page.RelPermalink $p.RelPermalink }}active{{ end }}" data-nav-id="{{ $p.RelPermalink }}">
-              <a href="{{ $p.RelPermalink }}">
-                <span>{{ $p.Title }}    {{ if $page.Site.Params.showVisitedLinks}}  <i class="fa fa-check read-icon">  {{ end }} </i></span>
+            <li class="dd-item {{ if eq $page.RelPermalink $p.Page.RelPermalink }}active{{ end }}" data-nav-id="{{ $p.Page.RelPermalink }}">
+              <a href="{{ $p.Page.RelPermalink }}">
+                <span>{{ $p.Page.Title }}    {{ if $page.Site.Params.showVisitedLinks}}  <i class="fa fa-check read-icon">  {{ end }} </i></span>
               </a>
             </li>
           {{ end }}
