@@ -16,42 +16,6 @@
   <div class="highlightable">
     <ul class="topics">
       {{ $page := . }}
-      
- {{ if $page.Site.Params.createFromSiteMenusMain}}
-    {{ range .Site.Menus.main }}
-        <li class="dd-item  {{ if eq $page.RelPermalink .URL }}active{{ end }} {{if in $page.RelPermalink .URL }}parent{{ end }}" data-nav-id="{{.URL}}">
-          <a href="{{.URL}}">
-            <span>{{ .Pre  }} {{ .Name }} {{ if $page.Site.Params.showVisitedLinks}}  <i class="fa fa-check read-icon"> {{ end }} </i> </span>
-          </a>
-          {{ if .HasChildren }}
-          <ul>
-            {{ range $lvl2 := .Children}}
-            <li class="dd-item {{ if eq $page.RelPermalink $lvl2.URL }}active{{ end }}" data-nav-id="{{$lvl2.URL}}">
-              <a href="{{$lvl2.URL}}">
-                <span> {{  $lvl2.Pre  }} {{ $lvl2.Name  }} {{ if $page.Site.Params.showVisitedLinks}} <i class="fa fa-check read-icon"></i> {{ end }} </span>
-              </a>
-
-              {{ if $lvl2.HasChildren }}
-              <!-- if children has children 3rd level -->
-              <ul>
-                {{ range $lvl3 := $lvl2.Children}}
-                <li class="dd-item {{ if eq $page.RelPermalink $lvl3.URL }}active{{ end }}" data-nav-id="{{$lvl3.URL}}">
-                  <a href="{{$lvl3.URL}}">
-                    <span>{{  $lvl3.Pre  }} {{ $lvl3.Name  }}    {{ if $page.Site.Params.showVisitedLinks}}  <i class="fa fa-check read-icon"></i> {{ end }} </span>
-                  </a>
-                </li>
-                {{ end }}
-              </ul>
-              {{ end }}
-            </li>
-            {{ end }}
-          </ul>
-          {{ end }}
-        </li>
-    {{ end }}
- {{else}}
-<!-- Use default method, create menu from folder structure -->
-    
       {{ range $key , $value := .Site.Sections }}
       {{ if ne $key "" }}
       {{ $first := (index $value 0).Page }}
@@ -84,11 +48,6 @@
       </li>
       {{ end }}
       {{ end }}
-      
-     {{ end }}
-      
-      
-      
     </ul>
     <hr>
      {{ if .Site.Params.showVisitedLinks}} 

@@ -48,32 +48,16 @@
                 {{ if and (not .Params.chapter) (.Params.toc) }}
                 <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
                 {{ end }}
-                 {{ if $page.Site.Params.createFromSiteMenusMain}}
-                    {{ $type := .Params.menu.main.parent }}
-                    {{ $relLink := .RelPermalink }}
-                    {{ range $name , $value := .Site.Menus.main }}
-
-                        {{ if eq $value.Identifier $type }} 
-                          {{ if ne $relLink $value.URL }}
-                               <a href="{{  $value.URL }}" itemprop="url"><span itemprop="title"> <b>{{  $value.Name }}</b></span></a> <i class="fa fa-angle-right"></i>
-                          {{ end }}
-                        {{ end }}
+                {{ $type := .Type }}
+                {{ $relLink := .RelPermalink }}
+                {{ range $name , $value := .Site.Sections }}
+                  {{ if eq $name $type }}
+                    {{ $first := (index $value 0).Page }}
+                    {{ if ne $first.RelPermalink $relLink }}
+                <a href="{{ $first.RelPermalink }}" itemprop="url"><span itemprop="title">{{ $first.Title }}</span></a> <i class="fa fa-angle-right"></i>
                     {{ end }}
-                 
-                 {{else}} <!-- use current method as default-->
-                
-                      {{ $type := .Type }}
-                      {{ $relLink := .RelPermalink }}
-                      {{ range $name , $value := .Site.Sections }}
-                        {{ if eq $name $type }}
-                          {{ $first := (index $value 0).Page }}
-                          {{ if ne $first.RelPermalink $relLink }}
-                      <a href="{{ $first.RelPermalink }}" itemprop="url"><span itemprop="title">{{ $first.Title }}</span></a> <i class="fa fa-angle-right"></i>
-                          {{ end }}
-                        {{ end }}
-                      {{ end }}
-                 {{end}}
-                
+                  {{ end }}
+                {{ end }}
                 {{ with .Title }}<span itemprop="title"> {{ . }}</span>{{ end }}
               </div>
               {{ if .Params.toc }}
