@@ -903,10 +903,15 @@ td {
 }
 #body #breadcrumbs {
     height: auto;
-    display: block;
     margin-bottom: 0;
     padding-left: 0;
     line-height: 1.4;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
+    display: inline-block;
+    float: left;
 }
 #body #breadcrumbs span {
     padding: 0 0.1rem;
