@@ -78,9 +78,6 @@ b, strong, label, th {
 #grav-logo path {
     fill: #fff !important;
 }
-#header {
-    border-bottom: 4px solid #9c6fb6;
-}
 #sidebar {
     font-weight: 300 !important;
 }
@@ -99,10 +96,11 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border-color: #00bdf3;
     box-shadow: inset 0 1px 3px rgba(0,0,0,.06),0 0 5px rgba(0,169,218,.7)
 }
-#header {
+#header-wrapper {
     background: #8451a1;
     color: #fff;
     text-align: center;
+    border-bottom: 4px solid #9c6fb6;
     padding: 1rem;
 }
 #header a {
@@ -116,7 +114,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     fill: #fff;
 }
 .searchbox {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     position: relative;
     border: 1px solid #915eae;
     background: #764890;
@@ -805,7 +803,7 @@ td {
     border-right-color: rgba(0, 0, 0, 0.8);
 }
 .highlightable {
-    padding: 25px 0 15px;
+    padding: 1rem 0 1rem;
     overflow: auto;
     position: relative;
 }

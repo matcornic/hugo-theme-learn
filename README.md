@@ -43,6 +43,11 @@ And set `search = true` in your config.toml
 
 To generate your lunr index, you can see this project https://github.com/gwleclerc/lunr-hugo which parse your markdown files and extract toml and yaml headers to create index with corresponding format.
 
+In order to generate the index of your static site launch the following comand after installing `lunr-hugo` using `npm`
+```
+    lunr-hugo -i "<content directory>/**/*.md" -o static/json/search.json -l <header format (yaml or toml)>
+```
+
 # TODO
 
 - [Handling more than 2 levels in documentation](https://github.com/matcornic/hugo-theme-learn/issues/11)

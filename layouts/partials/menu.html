@@ -2,10 +2,10 @@
   <div id="header-wrapper">
     <div id="header">
       {{ partial "logo.html" . }}
-      {{ if .Site.Params.search }}
-        {{ partial "search.html" . }}
-      {{ end }}
     </div>
+    {{ if .Site.Params.search }}
+        {{ partial "search.html" . }}
+    {{ end }}
 </div>
 
 
@@ -45,7 +45,7 @@
               {{ printf $first.Params.icon | safeHTML }}
             {{ end }}
              {{ $first.Title }}
-            {{ if $page.Site.Params.showVisitedLinks}} 
+            {{ if $page.Site.Params.showVisitedLinks}}
               <i class="fa fa-check read-icon"></i>
              {{ end }}
            </span>
@@ -68,9 +68,9 @@
       {{ end }}
     </ul>
     <hr>
-     {{ if .Site.Params.showVisitedLinks}} 
+     {{ if .Site.Params.showVisitedLinks}}
      <a class="padding" href="#" data-clear-history-toggle=""><i class="fa fa-fw fa-history"></i> Clear History</a>
-     {{ end }} 
+     {{ end }}
     <section id="footer">
       <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
     </section>

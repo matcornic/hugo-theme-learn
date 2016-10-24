@@ -3,7 +3,7 @@ var lunrIndex, pagesIndex;
 // Initialize lunrjs using our generated index file
 function initLunr() {
     // First retrieve the index file
-    $.getJSON("/json/search.json")
+    $.getJSON(baseurl + "/json/search.json")
         .done(function(index) {
             pagesIndex = index;
             // Set up lunrjs by declaring the fields we use
@@ -50,7 +50,7 @@ function search(query) {
 // Let's get started
 initLunr();
 $( document ).ready(function() {
-    horsey($("#search-by").get(0), {
+    var horseyList = horsey($("#search-by").get(0), {
         suggestions: function (value, done) {
             var query = $("#search-by").val();
             var results = search(query);
@@ -81,4 +81,5 @@ $( document ).ready(function() {
         },
         limit: 10
     });
+    horseyList.refreshPosition();
 });

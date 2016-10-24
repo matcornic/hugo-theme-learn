@@ -8,11 +8,8 @@
   background-color: #fff;
   color: #333;
   transition: left 0.1s ease-in-out;
-  position: fixed;
   max-height: 70vh;
   overflow: auto;
-  left: 17px !important;
-  top: 135px !important;
   width: 265px;
 }
 .sey-show {
