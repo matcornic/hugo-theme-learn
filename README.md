@@ -22,31 +22,7 @@ $ git clone https://github.com/matcornic/hugo-theme-learn.git
 - Add shadow or border on images
 - Automatic table of contents
 - Create buttons (typically used to provide a link to a demo)
-
-# Search
-To use the `search` functionality, you just have to put a `lunr` index which respects this format :
-```json
-[
-    {
-        "uri": "/docs/01-start/index",
-        "title": "Get started",
-        "content": "\n\nGet started\n\nAll you need to know...\n",
-        "tags": ["start", "intro"]
-    },
-    ...
-]
-```
-
-into a `static/json/search.json` file in your hugo project.
-
-And set `search = true` in your config.toml
-
-To generate your lunr index, you can see this project https://github.com/gwleclerc/lunr-hugo which parse your markdown files and extract toml and yaml headers to create index with corresponding format.
-
-In order to generate the index of your static site launch the following comand after installing `lunr-hugo` using `npm`
-```
-    lunr-hugo -i "<content directory>/**/*.md" -o static/json/search.json -l <header format (yaml or toml)>
-```
+- Search using `lunr` index
 
 # TODO
 
