@@ -122,7 +122,7 @@ jQuery(document).ready(function() {
     });
 
     var ajax;
-    jQuery('[data-search-input]').on('input', function() {
+    jQuery('[#search-by]').on('input', function() {
         var input = jQuery(this),
             value = input.val(),
             items = jQuery('[data-nav-id]');
@@ -141,7 +141,7 @@ jQuery(document).ready(function() {
         if (ajax && ajax.abort) ajax.abort();
         
         jQuery('[data-search-clear]').on('click', function() {
-            jQuery('[data-search-input]').val('').trigger('input');
+            jQuery('[#search-by]').val('').trigger('input');
             sessionStorage.removeItem('search-input');
             $(".highlightable").unhighlight({ element: 'mark' })
         });
@@ -149,8 +149,8 @@ jQuery(document).ready(function() {
 
     if (sessionStorage.getItem('search-value')) {
         jQuery(document.body).removeClass('searchbox-hidden');
-        jQuery('[data-search-input]').val(sessionStorage.getItem('search-value'));
-        jQuery('[data-search-input]').trigger('input');
+        jQuery('[#search-by]').val(sessionStorage.getItem('search-value'));
+        jQuery('[#search-by]').trigger('input');
     }
 
     // clipboard
