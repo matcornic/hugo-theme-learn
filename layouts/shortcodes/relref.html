@@ -1,6 +1,6 @@
 {{- if in (.Get 0) "/_index.md" -}}
-	{{- $path := (trim (.Get 0) "_index.md") -}}
-	{{- with .Site.GetPage "section" (trim $path "/") -}}
+	{{- $path := (replace (.Get 0) "/_index.md" "") -}}
+	{{- with .Site.GetPage "section" $path -}}
 		{{- .URL -}}
 	{{- end -}}
 {{- else -}}
