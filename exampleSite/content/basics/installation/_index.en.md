@@ -58,6 +58,8 @@ hugo new --kind chapter basics/_index.md
 
 By opening the given file, you should see the property `chapter=true` on top, meaning this page is a _chapter_.
 
+By default all chapters and pages are created as draft. If you want to render these pages, remove the property `draft: true` from the metadata.
+
 ## Create your first content pages
 
 Then, create content pages inside the previous chapter. Here are two ways to create content in the chapter :
