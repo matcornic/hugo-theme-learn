@@ -21,7 +21,20 @@
       <link href="{{(printf "css/theme-%s.css" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{end}}
 
-    <script src="{{"js/jquery-2.x.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
+
+    {{ $css  := .Site.Params.cssDirectory | default "css" | replaceRE "^/" "" }}
+    {{ $path := printf "/static/%s" $css }}
+
+    {{ if not (fileExists $path) }}
+       {{ errorf "No such directory: %s" $path  }}
+    {{ else }}
+      {{ range (readDir $path) }}
+          {{ $url := printf "%s/%s" $css .Name | relURL }}
+             <link href="{{ $url }}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+       {{ end }}
+    {{ end }}
+
+       <script src="{{"js/jquery-2.x.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
