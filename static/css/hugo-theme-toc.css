@@ -1,12 +1,9 @@
-/* Insert here special css for hugo theme, on top of any other imported css */
-
-
-/* Table of contents */
+/* navbar */
 
 .progress ul {
-  list-style: none;
-  margin: 0;
-  padding: 0 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
 }
 
 .progress .wrapper #TableOfContents {
@@ -16,11 +13,35 @@
     padding: 15px !important;
 }
 
-.toc.toc-aside{
+.progress .wrapper #TableOfContents > ul > li > ul > li > ul li {
+    margin-right: 8px;
+}
+
+.progress .wrapper #TableOfContents > ul > li > a {
+    font-weight: bold;
+    padding: 0 18px;
+    margin: 0 2px;
+}
+
+.progress .wrapper #TableOfContents > ul > li > ul > li > a {
+    font-weight: bold;
+}
+
+.progress .wrapper #TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li {
+    display: none;
+}
+
+/* page */
+.toc.toc-page ul {
+    list-style: none;
+}
+
+/* aside */
+.toc.toc-aside {
     visibility: hidden;
 }
 
-.toc.toc-aside .d-none{
+.toc.toc-aside .d-none {
     display: none;
 }
 
@@ -44,29 +65,6 @@
     flex-basis: 75%;
 }
 
-.toc.toc-aside-wrapper .toc.toc-aside{
+.toc.toc-aside-wrapper .toc.toc-aside {
     visibility: visible;
-}
-
-.progress .wrapper #TableOfContents > ul > li > ul > li > ul li {
-  margin-right: 8px;
-}
-
-.progress .wrapper #TableOfContents > ul > li > a   {
-  font-weight: bold; padding: 0 18px; margin: 0 2px;
-}
-
-.progress .wrapper #TableOfContents > ul > li > ul > li > a {
-  font-weight: bold;
-}
-
-.progress .wrapper #TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li  {
-    display: none;
-}
-
-.toc.toc-page ul {
-    list-style: none;
-}
-
-.toc.toc-aside {
 }
