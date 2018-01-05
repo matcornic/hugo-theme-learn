@@ -7,13 +7,26 @@
         const innerBody = document.querySelector('#body-inner');
         const parent = innerBody.parentElement ;
         const toc = document.querySelector('.toc.toc-aside');
+
+		// cleanup #TableOfContents first level is not needed
+        const tableOfContents = toc.querySelector("#TableOfContents");
+        const topLevel = toc.querySelectorAll("#TableOfContents > ul > li > *");
+        tableOfContents.textContent = "";
+        topLevel.forEach(function (element) {
+            tableOfContents.appendChild(element);
+        });
+
+        // add aside wrapper
         const tocWrapper = parent.appendChild(document.createElement("div"));
         tocWrapper.classList.add("toc" ,"toc-aside-wrapper");
         parent.insertBefore(tocWrapper, innerBody);
         tocWrapper.appendChild(innerBody);
         tocWrapper.appendChild(toc);
+
+        // set aside sticky only for large screen
         if (window.matchMedia("(min-width: 48em)").matches) {
             $(toc).sticky({topSpacing:48}).perfectScrollbar();
         }
+
     });
 </script>
