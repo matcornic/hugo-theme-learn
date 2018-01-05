@@ -23,6 +23,7 @@ function initAsideToc() {
     // set aside sticky only for large screen
     if (window.matchMedia('(min-width: 48em)').matches) {
         $(toc).sticky({topSpacing: 48}).perfectScrollbar();
+        $(tableOfContents).perfectScrollbar();
     }
 
     // hide too deep element
