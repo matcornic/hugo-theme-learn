@@ -1,4 +1,19 @@
-<div class="toc toc-aside">
+<div class="toc toc-aside" data-max-depth="{{ .Params.tocMaxdepth }}">
 	{{ .TableOfContents }}
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const innerBody = document.querySelector('#body-inner');
+        const parent = innerBody.parentElement ;
+        const toc = document.querySelector('.toc.toc-aside');
+        const tocWrapper = parent.appendChild(document.createElement("div"));
+        tocWrapper.classList.add("toc" ,"toc-aside-wrapper");
+        parent.insertBefore(tocWrapper, innerBody);
+        tocWrapper.appendChild(innerBody);
+        tocWrapper.appendChild(toc);
+        if (window.matchMedia("(min-width: 48em)").matches) {
+            $(toc).sticky({topSpacing:48}).perfectScrollbar();
+        }
+    });
+</script>

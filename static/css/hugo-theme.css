@@ -16,6 +16,33 @@
     padding: 15px !important;
 }
 
+.toc.toc-aside{
+    display: none;
+}
+
+.toc.toc-aside-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media only all and (max-width: 48em) {
+    .toc.toc-aside-wrapper {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+.toc.toc-aside-wrapper .toc.toc-aside, .toc.toc-aside-wrapper .sticky-wrapper {
+    flex-basis: 25%;
+    min-width: 235px;
+}
+
+.toc.toc-aside-wrapper #body-inner {
+    flex-basis: 75%;
+}
+
+.toc.toc-aside-wrapper .toc.toc-aside{
+    display: inherit;
+}
 
 .progress .wrapper #TableOfContents > ul > li > ul > li > ul li {
   margin-right: 8px;
