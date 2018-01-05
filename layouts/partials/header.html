@@ -37,6 +37,8 @@
   </head>
   <body class="" data-url="{{ .RelPermalink }}">
     {{ partial "menu.html" . }}
+	{{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
+    {{$tocMode := .Params.tocMode | default "navbar" }}
         <section id="body">
         <div id="overlay"></div>
         <div class="padding highlightable">
@@ -55,21 +57,20 @@
                   </div>
                   {{ end }}
                 {{ end }}
-                {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
                         <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
                           <i class="fa fa-bars"></i>
                         </a>
                     </span>
-                  {{ if $toc }}
+                  {{ if and ($toc) (eq $tocMode "navbar") }}
                   <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
                   {{ end }}
                   <span class="links">
                     {{ template "breadcrumb" dict "page" . "value" .Title }}   
                   </span>
                 </div>
-                {{ if $toc }}
+                {{ if and ($toc) (eq $tocMode "navbar") }}
                     {{ partial "toc.html" . }}
                 {{ end }}
               </div>
@@ -78,6 +79,12 @@
 
         {{ if .Params.chapter }}
           <div id="chapter">
+        {{ end }}
+		{{ if and ($toc) (eq $tocMode "page") }}
+          {{ partial "toc-page.html" . }}
+        {{ end }}
+        {{ if and ($toc) (eq $tocMode "aside") }}
+          {{ partial "toc-aside.html" . }}
         {{ end }}
         <div id="body-inner">
           {{if and (not .IsHome) (not .Params.chapter) }}
