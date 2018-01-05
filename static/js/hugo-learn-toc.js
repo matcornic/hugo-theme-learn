@@ -37,5 +37,5 @@ function initAsideToc() {
             elementToHide.classList.add('d-none');
         });
     }
-    // initScrollSpy();
+    initScrollSpy(toc);
 }
