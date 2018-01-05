@@ -17,6 +17,10 @@
 }
 
 .toc.toc-aside{
+    visibility: hidden;
+}
+
+.toc.toc-aside .d-none{
     display: none;
 }
 
@@ -41,7 +45,7 @@
 }
 
 .toc.toc-aside-wrapper .toc.toc-aside{
-    display: inherit;
+    visibility: visible;
 }
 
 .progress .wrapper #TableOfContents > ul > li > ul > li > ul li {
