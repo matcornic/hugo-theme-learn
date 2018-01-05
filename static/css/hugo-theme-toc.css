@@ -68,3 +68,11 @@
 .toc.toc-aside-wrapper .toc.toc-aside {
     visibility: visible;
 }
+
+.toc.toc-aside #TableOfContents ul {
+    list-style: none;
+}
+
+.toc.toc-aside #TableOfContents > ul > li > a {
+    font-weight: bold;
+}
