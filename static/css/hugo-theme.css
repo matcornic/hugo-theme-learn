@@ -9,7 +9,7 @@
   padding: 0 5px;
 }
 
-#TableOfContents {
+.progress .wrapper #TableOfContents {
     font-size: 13px !important;
     max-height: 85vh;
     overflow: auto;
@@ -17,22 +17,30 @@
 }
 
 
-#TableOfContents > ul > li > ul > li > ul li {
+.progress .wrapper #TableOfContents > ul > li > ul > li > ul li {
   margin-right: 8px;
 }
 
-#TableOfContents > ul > li > a   {
+.progress .wrapper #TableOfContents > ul > li > a   {
   font-weight: bold; padding: 0 18px; margin: 0 2px;
 }
 
-#TableOfContents > ul > li > ul > li > a {
+.progress .wrapper #TableOfContents > ul > li > ul > li > a {
   font-weight: bold;
 }
 
-#TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li  {
+.progress .wrapper #TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li  {
     display: none;
 }
 
+.toc.toc-page ul {
+    list-style: none;
+}
+
+.toc.toc-aside {
+}
+
+/* theme */
 body {
     font-size: 16px !important;
     color: #323232 !important;
