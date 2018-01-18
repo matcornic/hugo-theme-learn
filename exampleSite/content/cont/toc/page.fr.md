@@ -4,6 +4,10 @@ title: page exemple
 weight: 35
 ---
 
+{{% notice warning %}}
+Ceci est une copie de la page [Syntaxe Markdown](../../markdown) afin de demontrer le mode **page** du  sommaire.
+{{% /notice %}}
+
 {{% notice note %}}
 Cette page est une copie de la [doc de Grav](http://learn.getgrav.org/content/markdown).
 La seule différence porte sur la personalisation des images ([taille]({{< relref "#resizing-image" >}}), [ajout de classes CSS]({{< relref "#add-css-classes" >}})...)

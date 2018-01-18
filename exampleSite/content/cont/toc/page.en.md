@@ -5,6 +5,10 @@ weight: 35
 tocMode: page
 ---
 
+{{% notice warning %}}
+This is a copy of  [Syntaxe Markdown](../../markdown) to demonstrate "Table of content" **page** mode .
+{{% /notice %}}
+
 {{% notice note %}}
 This page is a shameful copy of the great [Grav original page](http://learn.getgrav.org/content/markdown).
 Only difference is information about image customization ([resizing]({{< relref "#resizing-image" >}}), [add CSS classes]({{< relref "#add-css-classes" >}})...)
