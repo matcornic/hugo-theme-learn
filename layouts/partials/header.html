@@ -38,7 +38,7 @@
   <body class="" data-url="{{ .RelPermalink }}">
     {{ partial "menu.html" . }}
 	{{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
-    {{$tocMode := .Params.tocMode | default "navbar" }}
+    {{$tocMode := .Params.tocMode | default .Site.Params.tocMode | default "navbar" }}
         <section id="body">
         <div id="overlay"></div>
         <div class="padding highlightable">
