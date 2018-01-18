@@ -48,8 +48,8 @@
           </p>
           <p>{{T "message-404"}}</p>
           <p></p>
-          <p><a href="{{.Site.BaseURL}}">{{T "Go-to-homepage"}}</a></p>
-          <p><img src="{{ .Site.BaseURL }}/images/gopher-404.jpg" style="width:50%"></img></p>
+          <p><a href='{{ "" | relURL }}'>{{T "Go-to-homepage"}}</a></p>
+          <p><img src='{{ "/images/gopher-404.jpg" | relURL }}' style="width:50%"></img></p>
         </div>
       </div>
 

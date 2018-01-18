@@ -111,11 +111,11 @@
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
       {{ if ne $numberOfPages 0 }}
         <ul>
-          {{ .Scratch.Set "pages" .Pages }}
+          {{ $currentNode.Scratch.Set "pages" .Pages }}
           {{ if .Sections}}
-            {{ .Scratch.Set "pages" (.Pages | union .Sections) }}
+            {{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
           {{end}}
-          {{ $pages := (.Scratch.Get "pages") }}
+          {{ $pages := ($currentNode.Scratch.Get "pages") }}
           
         {{if eq .Site.Params.ordersectionsby "title"}}  
           {{ range $pages.ByTitle }}
