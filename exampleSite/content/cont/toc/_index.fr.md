@@ -10,6 +10,17 @@ tocMaxDepth: 2
 
 ## Configuration 
 
+### Site configuration
+
+In the `config.toml` file you can define default site configuration by adding the tocMode parameter :
+
+```toml
+[params]
+  tocMode = "aside" # navbar | aside | page
+```
+
+### Page specific configuration
+
 In each page you can change the "table of contents" display layout using page parameters.
 
 ```markdown
@@ -20,8 +31,6 @@ weight: 15
 tocMode: navbar | page | aside
 ---
 ```
-
-There is no global configuration.
 
 ### navbar (default)
 
