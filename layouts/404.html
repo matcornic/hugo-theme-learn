@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="{{ .Site.Language.Lang }}" class="js csstransforms3d">
 
 <head>
   <meta charset="utf-8"> {{ partial "meta.html" . }} {{ partial "favicon.html" . }} {{ .Scratch.Add "title" "" }}{{ if eq .Site.Data.titles .Title }}{{ .Scratch.Set "title" (index .Site.Data.titles .Title).title }}{{ else }}{{ .Scratch.Set "title" .Title}}{{end}}
