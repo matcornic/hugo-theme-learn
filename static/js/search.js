@@ -36,7 +36,7 @@ function initLunr() {
         })
         .fail(function(jqxhr, textStatus, error) {
             var err = textStatus + ", " + error;
-            console.error("Error getting Hugo index flie:", err);
+            console.error("Error getting Hugo index file:", err);
         });
 }
 
@@ -84,6 +84,7 @@ $( document ).ready(function() {
         },
         /* onSelect callback fires when a search suggestion is chosen */
         onSelect: function(e, term, item) {
+            console.log(item.getAttribute('data-val'));
             location.href = item.getAttribute('data-uri');
         }
     });

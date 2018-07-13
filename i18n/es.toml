@@ -2,7 +2,7 @@
 other = "Buscar..."
 
 [Clear-History]
-other = "Borrar Historial"
+other = "Limpiar historial"
 
 [Attachments-label]
 other = "Adjuntos"
@@ -11,16 +11,16 @@ other = "Adjuntos"
 other = "Error"
 
 [message-404]
-other = "Ups. Parece que la página no existe ¯\\_(ツ)_/¯."
+other = "Woops. Parece que esta página no existe ¯\\_(ツ)_/¯."
 
 [Go-to-homepage]
-other = "Ir al inicio"
+other = "Ir a la home"
 
 [Edit-this-page]
-other = "Editar esta página"
+other = "Edita esta página"
 
 [Shortcuts-Title]
 other = "Más"
 
 [Expand-title]
-other = "Expandir..."
+other = "Expándeme..."

@@ -1,8 +1,26 @@
+[create-header-md]
+other = "Create a content/_header.md to customize this"
+
+[create-footer-md]
+other = "Create a content/_footer.md file to customize the footer content"
+
 [Search-placeholder]
 other = "Search..."
 
 [Clear-History]
 other = "Clear History"
+
+[Page]
+other = "Page"
+
+[Next-Pages]
+other = "Next Pages"
+
+[Previous-Pages]
+other = "Previous Pages"
+
+[pagination-on]
+other = "of"
 
 [Attachments-label]
 other = "Attachments"
@@ -11,16 +29,16 @@ other = "Attachments"
 other = "Error"
 
 [message-404]
-other = "Woops. Looks like this page doesn't exist ¯\\_(ツ)_/¯."
+other = "Woops. Looks like this page doesn't exist."
 
 [Go-to-homepage]
 other = "Go to homepage"
 
 [Edit-this-page]
-other = "Edit this page"
-
-[Shortcuts-Title]
-other = "More"
+other = "Improve this page"
 
 [Expand-title]
 other = "Expand me..."
+
+[last-update-on]
+other = "Last update on"
