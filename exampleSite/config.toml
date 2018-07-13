@@ -1,73 +1,68 @@
-baseURL = "localhost:1313/test"
-languageCode = "en-US"
-defaultContentLanguage = "en"
+baseURL = "/"
 
-title = "Hugo Learn Documentation"
-theme = "hugo-theme-learn"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+title = "DocDock Documentation"
+theme = "hugo-theme-docdock"
 themesdir = "../.."
-metaDataFormat = "yaml"
-defaultContentLanguageInSubdir= true
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+
+# [Languages]
+# [Languages.en]
+# title = "Documentation for Hugo docDock"
+# weight = 1
+# languageName = "English"
+# 
+# [Languages.fr]
+# title = "Documentation du thème docDock"
+# weight = 2
+# languageName = "Français"
+
+
+
 
 [params]
-  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
-  description = "Documentation for Hugo Learn Theme"
-  author = "Mathieu Cornic"
-  showVisitedLinks = true
+editURL = "https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/"
+showVisitedLinks = true # default is false
+themeStyle = "flex" # "original" or "flex" # default "flex"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
+enableGitInfo = true
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-[Languages]
-[Languages.en]
-title = "Documentation for Hugo Learn Theme"
-weight = 1
-languageName = "English"
 
-[[Languages.en.menu.shortcuts]] 
-name = "<i class='fa fa-fw fa-github'></i> Github repo"
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-github'></i> <label>Github repo</label>"
 identifier = "ds"
-url = "https://github.com/matcornic/hugo-theme-learn"
+url = "https://github.com/vjeantet/hugo-theme-docdock"
 weight = 10
 
-[[Languages.en.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-camera'></i> Showcases"
-url = "showcase"
+[[menu.shortcuts]]
+name = "<i class='fa fa-cloud-download'></i> <label>Download</label>"
+url = "https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip"
 weight = 11
 
-[[Languages.en.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-bookmark'></i> Hugo Documentation"
+[[menu.shortcuts]]
+name = "<i class='fa fa-bookmark'></i> <label>Hugo Documentation</label>"
 identifier = "hugodoc"
 url = "https://gohugo.io/"
 weight = 20
 
-[[Languages.en.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
-url = "/credits"
-weight = 30
-
-[Languages.fr]
-title = "Documentation du thème Hugo Learn"
-weight = 2
-languageName = "Français"
-
-[[Languages.fr.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-github'></i> Repo Github"
-identifier = "ds"
-url = "https://github.com/matcornic/hugo-theme-learn"
-weight = 10
-
-[[Languages.fr.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-camera'></i> Vitrine"
-url = "/showcase"
-weight = 11
-
-[[Languages.fr.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-bookmark'></i> Documentation Hugo"
-identifier = "hugodoc"
-url = "https://gohugo.io/"
-weight = 20
-
-[[Languages.fr.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-bullhorn'></i> Crédits"
+[[menu.shortcuts]]
+name = "<i class='fa fa-bullhorn'></i> <label>Credits</label>"
 url = "/credits"
 weight = 30

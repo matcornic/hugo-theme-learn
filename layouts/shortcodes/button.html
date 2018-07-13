@@ -1,13 +1,6 @@
-<a {{ with .Get "href"}} href="{{.}}" target="_blank" {{ end }} class="btn btn-default">
-  {{ $icon := .Get "icon" }}
-  {{ $iconposition := .Get "icon-position" }}
-  {{ if ($icon) }}
-    {{ if or (not ($iconposition)) (eq $iconposition "left") }}
-  <i class="{{$icon}}"></i>
-    {{ end }}
-  {{ end }}
-  {{ .Inner }}
-  {{ if and ($icon) (eq $iconposition "right")}}
-  <i class="{{$icon}}"></i>
-  {{ end }}
-</a>
+<!-- Boutton -->
+{{ with .Get "align" }}<center>{{end}}
+<button class="btn  {{with .Get "theme"}}btn-{{.}}{{else}}btn-primary{{end}}" type="button" {{ with .Get "href" }} onclick="location.href='{{.}}'"{{end}} >{{.Inner}}</button>
+{{ with .Get "align" }}</center>{{end}}
+
+<!-- Boutton -->
