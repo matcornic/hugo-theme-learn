@@ -28,6 +28,10 @@ Navigate to your themes folder in your Hugo site and use the following commands:
 $ cd themes
 $ git clone https://github.com/matcornic/hugo-theme-learn.git
 ```
+if error :
+~~~sh
+$ git submodule add https://github.com/matcornic/hugo-theme-learn themes/hugo-theme-learn
+~~~
 
 Check that your Hugo version is minimum `0.25` with `hugo version`.
 
