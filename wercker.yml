@@ -1,7 +1,6 @@
 box:
   id: golang
-  ports:
-    - "5000"
+
 build:
   steps:
     # Gets the dependencies
