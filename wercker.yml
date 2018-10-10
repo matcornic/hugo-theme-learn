@@ -7,10 +7,10 @@ build:
     - script:
         name: get hugo
         code: |
-          go get github.com/gohugoio/hugo
+          git clone https://github.com/gohugoio/hugo.git && cd hugo && go install
 
     # Build the project
     - script:
         name: build site
         code: |
-          cd exampleSite && hugo
+          ls && cd exampleSite && hugo
