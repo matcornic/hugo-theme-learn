@@ -13,4 +13,4 @@ build:
     - script:
         name: build site
         code: |
-          pwd && cd exampleSite && pwd && hugo
+          cd exampleSite && hugo --theme source
