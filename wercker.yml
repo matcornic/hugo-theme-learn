@@ -13,4 +13,4 @@ build:
     - script:
         name: build site
         code: |
-          cd exampleSite && ls && ./hugo
+          pwd && cd exampleSite && pwd && hugo
