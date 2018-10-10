@@ -1,10 +1,9 @@
-box: golang
+box:
+  id: golang
+  ports:
+    - "5000"
 build:
   steps:
-    # Sets the go workspace and places you package
-    # at the right place in the workspace tree
-    - setup-go-workspace
-
     # Gets the dependencies
     - script:
         name: get hugo
