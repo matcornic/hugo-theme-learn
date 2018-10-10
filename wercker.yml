@@ -13,4 +13,4 @@ build:
     - script:
         name: build site
         code: |
-          cd exampleSite && hugo --theme source
+          ls layouts/shortcodes && cd exampleSite && hugo --theme source
