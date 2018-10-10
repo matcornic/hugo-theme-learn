@@ -1,8 +1,10 @@
-box:
-  id: golang
-
+box: golang
 build:
   steps:
+    # Sets the go workspace and places you package
+    # at the right place in the workspace tree
+    - setup-go-workspace
+
     # Gets the dependencies
     - script:
         name: get hugo
@@ -13,4 +15,4 @@ build:
     - script:
         name: build site
         code: |
-          ls layouts/shortcodes && cd exampleSite && hugo --theme source
+          cd exampleSite && hugo
