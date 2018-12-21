@@ -37,6 +37,7 @@
 body {
     background: #fff;
     color: #777;
+    position: relative;
 }
 body #chapter h1 {
     font-size: 3.5rem;
@@ -170,9 +171,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #sidebar {
     background-color: #322A38;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 300px;
+    height: 100%;
     bottom: 0;
     left: 0;
     font-weight: 400;
