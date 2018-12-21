@@ -1,0 +1,19 @@
+[build]
+  publish = "exampleSite/public"
+  command = "hugo -s exampleSite"
+
+[build.environment]
+  HUGO_THEME = "repo"
+  HUGO_THEMESDIR = "/opt/build"
+  HUGO_VERSION = "0.50"
+
+[context.production.environment]
+  HUGO_BASEURL = "https://learn.netlify.com/"
+
+[context.deploy-preview.environment]
+  HUGO_BASEURL = "$DEPLOY_PRIME_URL"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.branch-deploy.environment]
+  HUGO_BASEURL = "$DEPLOY_PRIME_URL"
+  HUGO_ENABLEGITINFO = "true"
