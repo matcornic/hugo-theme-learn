@@ -50,6 +50,7 @@
           <div class="select-style">
             <select id="select-language" onchange="location = this.value;">
           {{ $siteLanguages := .Site.Languages}}
+          {{ $baseUrl := .Site.BaseURL}}
           {{ $pageLang := .Page.Lang}}
           {{ range .Page.AllTranslations }}
               {{ $translation := .}}
@@ -57,9 +58,9 @@
                   {{ if eq $translation.Lang .Lang }}
                     {{ $selected := false }}
                     {{ if eq $pageLang .Lang}}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}" selected>{{ .LanguageName }}</option>
+                      <option id="{{ $translation.Language }}" value="{{ $baseUrl }}{{ $translation.URL }}" selected>{{ .LanguageName }}</option>
                     {{ else }}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.URL }}">{{ .LanguageName }}</option>
+                      <option id="{{ $translation.Language }}" value="{{ $baseUrl }}{{ $translation.URL }}">{{ .LanguageName }}</option>
                     {{ end }}
                   {{ end }}
               {{ end }}
@@ -147,4 +148,3 @@
   {{end}}
  {{ end }}
 {{ end }}
-
