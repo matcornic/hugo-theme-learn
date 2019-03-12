@@ -45,28 +45,28 @@
 					{{$num := sub ( int (trim $.style "h") ) 1 }}
 					{{$numn := add $num $.count }}
 
-					{{(printf "<h%d>" $numn)|safeHTML}}
-					<a href="{{.URL}}" >{{ .Title }}</a>
-					{{(printf "</h%d>" $numn)|safeHTML}}
+{{(printf "<h%d>" $numn)|safeHTML}}
+<a href="{{.URL}}" >{{ .Title }}</a>
+{{(printf "</h%d>" $numn)|safeHTML}}
 
 				{{else}}
-					{{(printf "<%s>" $.style)|safeHTML}}
-					<a href="{{.URL}}" >{{ .Title }}</a>
-					{{(printf "</%s>" $.style)|safeHTML}}
+{{(printf "<%s>" $.style)|safeHTML}}
+<a href="{{.URL}}" >{{ .Title }}</a>
+{{(printf "</%s>" $.style)|safeHTML}}
 				{{end}}
 
 				{{if $.description}}
 					{{if .Description}}
-						<p>{{.Description}}</p>
+<p>{{.Description}}</p>
 					{{else}}
-						<p>{{.Summary}}</p>
+<p>{{.Summary}}</p>
 					{{end}}
 				{{end}}
 			{{end}}
 			{{ if lt $.count $.depth}}
 
 				{{if eq $.style "li"}}
-					<ul>
+<ul>
 				{{end}}
 
 				{{ if .Sections}}
@@ -92,7 +92,7 @@
 				{{end}}
 
 				{{if eq $.style "li"}}
-					</ul>
+</ul>
 				{{end}}
 			{{end}}
 		{{end}}
