@@ -52,6 +52,17 @@ If not already present, add the follow lines in the same `config.toml` file.
 home = [ "HTML", "RSS", "JSON"]
 ```
 
+Sometimes, a huge search page can make the indexing and search very slow. To prevent a page from being indexed, give it the special tag 'skipIndexing':
+
+```toml
+---
+title: "My very big page"
+date: 2019-03-13T18:28:08-07:00
+draft: false
+tags: ['skipIndexing']
+---
+```
+
 Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.
 
 > Hugo generate lunrjs index.json at the root of public folder. 
