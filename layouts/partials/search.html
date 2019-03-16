@@ -12,5 +12,6 @@
     {{ else }}
         var baseurl = "{{.Site.BaseURL}}";
     {{ end }}
+    var fileSearchBlacklist = "{{.Site.Params.fileSearchBlacklist}}";
 </script>
 <script type="text/javascript" src="{{"js/search.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>

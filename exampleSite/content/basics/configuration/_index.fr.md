@@ -48,6 +48,18 @@ Si ce n'est pas déjà présent, ajoutez les lignes suivantes dans le fichier `c
 home = [ "HTML", "RSS", "JSON"]
 ```
 
+Parfois, des grosses page peuvent rentre l'indexement et la recherche lentes. Pour éviter cela, il suffit d'ajouter aux pages le tag 'skipIndexing':
+
+```toml
+---
+title: "Ma tres grosse page"
+date: 2019-03-13T18:28:08-07:00
+draft: false
+tags: ['skipIndexing']
+---
+```
+
+
 Le thème *Learn* utilise les dernières amélioraions d'Hugo pour générer un fichier d'index JSON, prêt à être consommé par le moteur de recherche lunr.js.
 
 > Hugo génère lunrjs index.json à la racine du dossier `public`. 
