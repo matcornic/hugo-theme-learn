@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html {
+	min-height: 100%;
+}
 #top-github-link, #body #breadcrumbs {
     position: relative;
     top: 50%;
@@ -38,6 +41,7 @@ body {
     background: #fff;
     color: #777;
     position: relative;
+    min-height: 100vh;
 }
 body #chapter h1 {
     font-size: 3.5rem;
