@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ .Page.Language | default "en" }}" class="js csstransforms3d">
+
+{{ partial "header.html" . }}
+
+<body class="" data-url="{{ .RelPermalink }}">
+  {{ partial "menu.html" . }}
+  
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      {{ if not .IsHome}}
+      {{   partial "body-topbar.html" . }}
+      {{ end }}
+      <div id="head-tags">
+        {{ partial "tags.html" . }}
+      </div>
+      <div id="{{ if .Params.chapter }}chapter{{end}}">
+        <div id="body-inner">
+          {{if and (not .IsHome) (not .Params.chapter) }}
+          <h1>
+            {{ if eq .Kind "taxonomy" }}
+            {{   .Kind }} ::
+            {{ end }}
+            {{ .Title }}
+          </h1>
+          {{ end }}
+          {{ block "content" . }} {{ end }}
+        </div>
+      </div> <!-- end chapter-->
+    </div>
+    {{ partial "custom-comments.html" . }}
+    {{ partial "body-navigation.html" . }}
+  </section>
+  <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+  </div>
+  {{ partial "body-js.html" . }}
+  {{ partial "footer.html" . }}
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<div id="top-bar">
+  {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
+  {{   $File := .File }}
+  {{   $Site := .Site }}
+  {{   with $File.Path }}
+  <div id="top-github-link">
+    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+      <i class="fas fa-code-branch"></i>
+      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
+    </a>
+  </div> 
+  {{   end }}
+  {{ end }}
+  {{ $toc := (and (not .Params.disableToc) (not .Params.chapter)) }}
+  <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="sidebar-toggle-span">
+      <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i></a>
+    </span>
+    {{ if $toc }}
+    <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+    {{ end }}
+    <span class="links">
+      {{ $showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb)) }}
+      {{ if $showBreadcrumb }}
+      {{   template "breadcrumb" dict "page" . "value" .Title }}
+      {{ else }}
+      {{   .Title }} 
+      {{ end }}
+    </span>
+  </div>
+  {{ if $toc }}
+  {{   partial "toc.html" . }}
+  {{ end }}
+</div>
