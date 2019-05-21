@@ -147,7 +147,7 @@
 - [**closed**] feat: style Hugo figure shortcode [#33](https://github.com/matcornic/hugo-theme-learn/pull/33)
 - [**closed**] Fix URL for 'Edit this page' on Windows [#27](https://github.com/matcornic/hugo-theme-learn/pull/27)
 - [**closed**] Revert "Menu generation using Content file instead directories" [#10](https://github.com/matcornic/hugo-theme-learn/pull/10)
-- [**closed**] (#25) use .Site.BaseURL to lcoate static assets [#26](https://github.com/matcornic/hugo-theme-learn/pull/26)
+- [**closed**] (#25) use .Site.BaseURL to locate static assets [#26](https://github.com/matcornic/hugo-theme-learn/pull/26)
 - [**closed**] Menu ordering and definition in config.toml [#8](https://github.com/matcornic/hugo-theme-learn/pull/8)
 - [**closed**] Menu generation using Content file instead directories [#5](https://github.com/matcornic/hugo-theme-learn/pull/5)
 - [**closed**] Add Checkmark On visited Links [#4](https://github.com/matcornic/hugo-theme-learn/pull/4)
