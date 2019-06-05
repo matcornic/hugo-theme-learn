@@ -110,29 +110,38 @@
       </a>
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
       {{ if ne $numberOfPages 0 }}
-        <ul>
           {{ $currentNode.Scratch.Set "pages" .Pages }}
           {{ if .Sections}}
             {{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
           {{end}}
           {{ $pages := ($currentNode.Scratch.Get "pages") }}
-          
-        {{if eq .Site.Params.ordersectionsby "title"}}  
-          {{ range $pages.ByTitle }}
-            {{ if and .Params.hidden (not $.showhidden) }} 
+
+          {{ $currentNode.Scratch.Set "allHidden" true}}
+            {{ range $pages }}
+              {{ if not .Params.hidden }}
+                {{ $currentNode.Scratch.Set "allHidden" false }}
+              {{ end }}
+            {{ end }}
+            {{ $allHidden := $currentNode.Scratch.Get "allHidden" }}
+          {{ if not $allHidden }}  
+            <ul>
+            {{if eq .Site.Params.ordersectionsby "title"}}  
+              {{ range $pages.ByTitle }}
+                {{ if and .Params.hidden (not $.showhidden) }} 
+                {{else}}
+                {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+                {{end}}
+              {{ end }}
             {{else}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+              {{ range $pages.ByWeight }}
+                {{ if and .Params.hidden (not $.showhidden) }} 
+                {{else}}
+                {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+                {{end}}
+              {{ end }}
             {{end}}
-          {{ end }}
-        {{else}}
-          {{ range $pages.ByWeight }}
-            {{ if and .Params.hidden (not $.showhidden) }} 
-            {{else}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
-            {{end}}
-          {{ end }}
-        {{end}}
-        </ul>
+            </ul>
+          {{end}}
       {{ end }}        
     </li>
   {{else}}
