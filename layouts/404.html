@@ -16,7 +16,7 @@
     {{with .Site.Params.themeVariant}}
       <link href="{{(printf "css/theme-%s.css" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{end}}
-<style type="text/css">
+<style>
     :root #header + #content > #left > #rlblock_left {
       display: none !important;
     }
