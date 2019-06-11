@@ -8,7 +8,7 @@
 <ul>
   {{ range .Site.Taxonomies.tags }}
     <li>
-      <a href="{{.Page.Permalink}}">{{.Page.Title | humanize}}</a>
+      <a href="{{.Page.Permalink}}">{{.Page.Title}}</a>
       {{ .Count }}
     </li>
   {{ end }}
