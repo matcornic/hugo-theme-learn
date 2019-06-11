@@ -4,10 +4,24 @@
 	{{ .Content }}
 {{end}}
 
-{{ if or (eq .Kind "taxonomy") (eq .Kind "taxonomyTerm") }}
+{{ if (eq .Kind "taxonomyTerm") }}
+<ul>
+  {{ range .Site.Taxonomies.tags }}
+    <li>
+      <a href="{{.Page.Permalink}}">{{.Page.Title | humanize}}</a>
+      {{ .Count }}
+    </li>
+  {{ end }}
+</ul>
+{{end}}
+
+
+{{ if (eq .Kind "taxonomy") }}
 <ul>
 	{{ range .Pages }}
-		<li><a href="{{.URL}}">{{.Title}}</a></li>
+		<li>
+      <a href="{{.URL}}">{{ plainify .Params.Pre }}{{.Title}}</a>
+    </li>
 	{{ end }}
 </ul>
 {{end}}

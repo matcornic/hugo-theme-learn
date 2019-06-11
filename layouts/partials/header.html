@@ -90,9 +90,6 @@
         <div id="body-inner">
           {{if (not .IsHome) }}
             <h1>
-              {{ if eq .Kind "taxonomy" }}
-                {{.Kind}} ::
-              {{ end }}
               {{.Title}}
             </h1>
           {{end}}
