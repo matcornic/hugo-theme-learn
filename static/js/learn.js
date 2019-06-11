@@ -229,7 +229,7 @@ jQuery(document).ready(function() {
              e.stopPropagation();
          }
      });
-    
+
     jQuery(document).keydown(function(e) {
       // prev links - left arrow key
       if(e.which == '37') {
@@ -264,7 +264,7 @@ jQuery(document).ready(function() {
         });
     }
 
-    /** 
+    /**
     * Fix anchor scrolling that hides behind top nav bar
     * Courtesy of https://stackoverflow.com/a/13067009/28106
     *
@@ -346,7 +346,7 @@ jQuery(document).ready(function() {
 
         $(document).ready($.proxy(anchorScrolls, 'init'));
     })(window.document, window.history, window.location);
-    
+
 });
 
 jQuery(window).on('load', function() {
@@ -388,7 +388,7 @@ jQuery.extend({
     highlight: function(node, re, nodeName, className) {
         if (node.nodeType === 3) {
             var match = node.data.match(re);
-            if (match) {
+            if (match && !$(node.parentNode).hasClass("mermaid")) {
                 var highlight = document.createElement(nodeName || 'span');
                 highlight.className = className || 'highlight';
                 var wordNode = node.splitText(match.index);
