@@ -69,7 +69,8 @@
                   <span class="links">
                  {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
                  {{if $showBreadcrumb}}
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}
+                    {{$title := (or .Params.menuTitle .Title)}}
+                    {{ template "breadcrumb" dict "page" . "value" $title }}
                  {{ else }}
                    {{ .Title }} 
                  {{ end }}
@@ -100,7 +101,8 @@
         {{define "breadcrumb"}}
           {{$parent := .page.Parent }}
           {{ if $parent }}
-            {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.URL $parent.Title .value) }}
+            {{ $title := (or $parent.Params.menuTitle .Title "")}}
+            {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.URL $title .value) }}
             {{ template "breadcrumb" dict "page" $parent "value" $value }} 
           {{else}}
             {{.value|safeHTML}}
