@@ -33,6 +33,10 @@ Note that some of these parameters are explained in details in other sections of
   disableShortcutsTitle = false
   # When using mulitlingual website, disable the switch language button.
   disableLanguageSwitchingButton = false
+  # Hide breadcrumbs in the header and only show the current page title
+  disableBreadcrumb = true
+  # Hide Next and Previous page buttons normally displayed full height beside content
+  disableNextPrev = true
   # Order sections in menu by "weight" or "title". Default to "weight"
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
@@ -51,4 +55,4 @@ home = [ "HTML", "RSS", "JSON"]
 Learn theme uses the last improvement available in hugo version 20+ to generate a json index file ready to be consumed by lunr.js javascript search engine.
 
 > Hugo generate lunrjs index.json at the root of public folder. 
-> When you build the site with hugo server, hugo generates it internally and of course it don’t show up in the filesystem
+> When you build the site with `hugo server`, hugo generates it internally and of course it doesn’t show up in the filesystem

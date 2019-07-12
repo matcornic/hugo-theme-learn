@@ -19,7 +19,7 @@ It will create a page with predefined Front-Matter:
 
 ```markdown
 +++
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
+title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
 weight = 5
 chapter = true
@@ -48,7 +48,7 @@ It will create a page with predefined Front-Matter:
 
 ```markdown
 +++
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
+title = "{{ replace .Name "-" " " | title }}"
 date =  {{ .Date }}
 weight = 5
 +++

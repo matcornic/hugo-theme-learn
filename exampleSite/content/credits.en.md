@@ -5,7 +5,7 @@ disableToc: true
 
 ## Contributors
 
-Thanks to them <i class="fa fa-heart"></i> for making Open Source Software a better place !
+Thanks to them <i class="fas fa-heart"></i> for making Open Source Software a better place !
 
 {{% ghcontributors "https://api.github.com/repos/matcornic/hugo-theme-learn/contributors?per_page=100" %}}
 
