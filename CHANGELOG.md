@@ -1,5 +1,32 @@
 # Changelog
 
+## v2.4.0 (04/09/2019)
+
+#### Bug Fixes
+
+- [**bug**] correct GitHub capitalization [#293](https://github.com/matcornic/hugo-theme-learn/pull/293)
+- [**bug**] Remove reference to the unused horsey CSS [#284](https://github.com/matcornic/hugo-theme-learn/pull/284)
+- [**bug**] Fix invalid HTML in 404 template. [#271](https://github.com/matcornic/hugo-theme-learn/pull/271)
+- [**bug**] fix 'locate' typo [#285](https://github.com/matcornic/hugo-theme-learn/pull/285)
+
+#### Enhancements
+
+- [**enhancement**] Delete html5shiv-printshiv.min.js [#319](https://github.com/matcornic/hugo-theme-learn/pull/319)
+- [**enhancement**] remove html5shiv [#315](https://github.com/matcornic/hugo-theme-learn/pull/315)
+- [**enhancement**] Fix deprecated .Hugo, .UniqueID and .URL references [#303](https://github.com/matcornic/hugo-theme-learn/pull/303)
+- [**enhancement**] remove unneeded type="text/css" [#297](https://github.com/matcornic/hugo-theme-learn/pull/297)
+- [**enhancement**] Fix type lines 364 and 369 [#304](https://github.com/matcornic/hugo-theme-learn/pull/304)
+- [**enhancement**] remove unneeded type="text/css" [#298](https://github.com/matcornic/hugo-theme-learn/pull/298)
+- [**enhancement**] HTTPS links in footer [#295](https://github.com/matcornic/hugo-theme-learn/pull/295)
+- [**enhancement**] remove unneeded  type="text/css" [#292](https://github.com/matcornic/hugo-theme-learn/pull/292)
+- [**enhancement**] Make shortcodes & example site compatible with Hugo v0.55 [#281](https://github.com/matcornic/hugo-theme-learn/pull/281)
+
+#### Internationalisation
+
+- [**i18n**] Added German and Arabic translation [#312](https://github.com/matcornic/hugo-theme-learn/pull/312)
+
+---
+
 ## v2.3.0 (16/04/2019)
 
 #### New features
@@ -15,10 +42,11 @@
 
 #### Enhancements
 
+- [**enhancement**] Render the ```mermaid blocks into graphs [#226](https://github.com/matcornic/hugo-theme-learn/pull/226)
+- [**enhancement**] Remove oudated versions of jquery & modernizr libraries [#259](https://github.com/matcornic/hugo-theme-learn/pull/259)
 - [**enhancement**] Various Updates [#237](https://github.com/matcornic/hugo-theme-learn/pull/237)
 - [**enhancement**] Use style instead of width and height in logo [#250](https://github.com/matcornic/hugo-theme-learn/pull/250)
 - [**enhancement**] [ImgBot] Optimize images [#222](https://github.com/matcornic/hugo-theme-learn/pull/222)
-- [**enhancement**] Render the ```mermaid blocks into graphs [#226](https://github.com/matcornic/hugo-theme-learn/pull/226)
 - [**enhancement**] remove duplicate icon and fix incorrect favicon type [#227](https://github.com/matcornic/hugo-theme-learn/pull/227)
 - [**enhancement**] HTTPS links in exampleSite menu-footer [#223](https://github.com/matcornic/hugo-theme-learn/pull/223)
 
@@ -132,9 +160,9 @@
 
 #### Uncategorised
 
-- [**closed**] Fix anchor scrolling that hides behind top nav bar [#46](https://github.com/matcornic/hugo-theme-learn/pull/46)
 - [**closed**] feat: Change the default code color [#43](https://github.com/matcornic/hugo-theme-learn/pull/43)
 - [**closed**] Use index pages + automatic navigation arrows [#36](https://github.com/matcornic/hugo-theme-learn/pull/36)
+- [**closed**] Fix anchor scrolling that hides behind top nav bar [#46](https://github.com/matcornic/hugo-theme-learn/pull/46)
 
 ---
 
@@ -142,13 +170,13 @@
 
 #### Uncategorised
 
-- [**closed**] Search [#18](https://github.com/matcornic/hugo-theme-learn/pull/18)
 - [**closed**] Extracted menu footer content to separate partial file [#35](https://github.com/matcornic/hugo-theme-learn/pull/35)
 - [**closed**] feat: style Hugo figure shortcode [#33](https://github.com/matcornic/hugo-theme-learn/pull/33)
 - [**closed**] Fix URL for 'Edit this page' on Windows [#27](https://github.com/matcornic/hugo-theme-learn/pull/27)
 - [**closed**] Revert "Menu generation using Content file instead directories" [#10](https://github.com/matcornic/hugo-theme-learn/pull/10)
-- [**closed**] (#25) use .Site.BaseURL to locate static assets [#26](https://github.com/matcornic/hugo-theme-learn/pull/26)
+- [**closed**] (#25) use .Site.BaseURL to lcoate static assets [#26](https://github.com/matcornic/hugo-theme-learn/pull/26)
 - [**closed**] Menu ordering and definition in config.toml [#8](https://github.com/matcornic/hugo-theme-learn/pull/8)
 - [**closed**] Menu generation using Content file instead directories [#5](https://github.com/matcornic/hugo-theme-learn/pull/5)
 - [**closed**] Add Checkmark On visited Links [#4](https://github.com/matcornic/hugo-theme-learn/pull/4)
 - [**closed**] doc: Add theme installation instructions [#1](https://github.com/matcornic/hugo-theme-learn/pull/1)
+- [**closed**] Search [#18](https://github.com/matcornic/hugo-theme-learn/pull/18)
