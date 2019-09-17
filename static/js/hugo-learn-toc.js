@@ -22,8 +22,10 @@ function initAsideToc() {
 
     // set aside sticky only for large screen
     if (window.matchMedia('(min-width: 48em)').matches) {
-        $(toc).sticky({topSpacing: 48}).perfectScrollbar();
-        $(tableOfContents).perfectScrollbar();
+        setTimeout( () => {
+            $(toc).sticky({topSpacing: 48});
+            $(tableOfContents).perfectScrollbar();
+        }, 0);
     }
 
     // hide too deep element
@@ -38,5 +40,6 @@ function initAsideToc() {
             elementToHide.classList.add('d-none');
         });
     }
-    initScrollSpy(toc);
+    
+    setTimeout(() => initScrollSpy(toc), 10);
 }
