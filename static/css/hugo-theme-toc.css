@@ -77,6 +77,13 @@
     max-width: 100%;
 }
 
+.toc.toc-aside-wrapper #body-inner h2,
+.toc.toc-aside-wrapper #body-inner h3,
+.toc.toc-aside-wrapper #body-inner h4,
+.toc.toc-aside-wrapper #body-inner h5 {
+    word-break: break-word;
+}
+
 .toc.toc-aside-wrapper .toc.toc-aside {
     visibility: visible;
     padding-left: 12px;
