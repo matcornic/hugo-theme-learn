@@ -663,3 +663,11 @@ Add a HTTP `classes` parameter to the link image to add CSS classes. `shadow`and
 ![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?classes=border,shadow)
 ```
 ![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&classes=border,shadow)
+
+### Lightbox
+
+Add a HTTP `featherlight` parameter to the link image to disable lightbox. By default lightbox is enabled using the featherlight.js plugin. You can disable this by defining `featherlight` to `false`. 
+
+```markdown
+![Minion](https://octodex.github.com/images/minion.png?featherlight=false)
+```
