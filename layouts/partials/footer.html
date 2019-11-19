@@ -29,7 +29,7 @@
                     {{ if .menu.IsHome}}
                         {{ $currentNode.Scratch.Set "pages" .menu.Sections }}
                     {{ else if .menu.Sections}}
-                        {{ $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) }}
+                        {{ $currentNode.Scratch.Set "pages" .menu.Pages }}
                     {{end}}
                     {{ $pages := ($currentNode.Scratch.Get "pages") }}
 
