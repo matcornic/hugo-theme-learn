@@ -261,8 +261,6 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #sidebar ul.topics ul ul {
     padding-bottom: 0;
 }
-
-
 #sidebar ul.topics li.parent ul, #sidebar ul.topics > li.active ul {
     display: none;
 }
@@ -270,7 +268,6 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 nav#sidebar ul.topics li.parent > ul {
 	display: block;
 }
-
 #sidebar ul.topics > li > a {
     line-height: 2rem;
     font-size: 1.1rem;
@@ -1137,6 +1134,3 @@ pre .copy-to-clipboard:hover {
 #searchResults {
     text-align: left;
 }
-
-
-
