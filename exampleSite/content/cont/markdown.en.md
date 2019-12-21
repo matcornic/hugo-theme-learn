@@ -361,12 +361,12 @@ In this example, `<section></section>` should be wrapped as **code**.
 
 Renders to:
 
-In this example, `<section></section>` should be wrapped with **code**.
+In this example, `<section></section>` should be wrapped as **code**.
 
 HTML:
 
 ```html
-<p>In this example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped with <strong>code</strong>.</p>
+<p>In this example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as <strong>code</strong>.</p>
 ```
 
 ### Indented code

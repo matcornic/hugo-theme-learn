@@ -45,7 +45,7 @@ Le fichier `_index.md` est obligatoire dans chaque dossier, c'est en quelques ro
 Un **Chapitre** affiche une page vouée à être une introduction pour un ensemble de pages filles. Habituellement, il va seulement contenir un titre et un résumé de la section.
 Vous pouvez définir n'importe quel contenu HTML comme préfixe de l'entrée du menu. Dans l'exemple ci-dessous, c'est juste un nombre mais vous pourriez utiliser une [icône](https://fortawesome.github.io/Font-Awesome/).
 
-![Page Chapitre](/cont/pages/images/pages-chapter.png?width=50pc)
+![Page Chapitre](/en/cont/pages/images/pages-chapter.png?width=50pc)
 
 ```markdown
 +++
@@ -66,7 +66,7 @@ Pour dire à **Hugo-theme-learn** de considérer la page comme un chapitre, conf
 
 Une page **Défaut** est n'importe quelle autre page.
 
-![Page défaut](/cont/pages/images/pages-default.png?width=50pc)
+![Page défaut](/en/cont/pages/images/pages-default.png?width=50pc)
 
     +++
     title = "Installation"
@@ -122,7 +122,7 @@ pre = "<i class='fab fa-github'></i> "
 +++
 ```
 
-![Titre avec icône](/cont/pages/images/frontmatter-icon.png)
+![Titre avec icône](/en/cont/pages/images/frontmatter-icon.png)
 
 ### Ordonner les entrées dans le menu
 

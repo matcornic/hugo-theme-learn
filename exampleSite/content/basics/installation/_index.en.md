@@ -48,7 +48,7 @@ Discover what this Hugo theme is all about and the core concepts behind it.
 
 renders as 
 
-![A Chapter](/basics/installation/images/chapter.png?classes=shadow&width=60pc)
+![A Chapter](/en/basics/installation/images/chapter.png?classes=shadow&width=60pc)
 
 **Hugo-theme-learn** provides archetypes to create skeletons for your website. Begin by creating your first chapter page with the following command
 

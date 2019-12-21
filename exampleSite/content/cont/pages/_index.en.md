@@ -45,7 +45,7 @@ Organize your site like [any other Hugo project](https://gohugo.io/content/organ
 A **Chapter** displays a page meant to be used as introduction for a set of child pages. Commonly, it contains a simple title and a catch line to define content that can be found under it.
 You can define any HTML as prefix for the menu. In the example below, it's just a number but that could be an [icon](https://fortawesome.github.io/Font-Awesome/).
 
-![Chapter page](/cont/pages/images/pages-chapter.png?width=50pc)
+![Chapter page](/en/cont/pages/images/pages-chapter.png?width=50pc)
 
 ```markdown
 +++
@@ -66,7 +66,7 @@ To tell **Hugo-theme-learn** to consider a page as a chapter, set `chapter=true`
 
 A **Default** page is any other content page.
 
-![Default page](/cont/pages/images/pages-default.png?width=50pc)
+![Default page](/en/cont/pages/images/pages-default.png?width=50pc)
 
 ```toml
 +++
@@ -126,7 +126,7 @@ pre = "<i class='fab fa-github'></i> "
 +++
 ```
 
-![Title with icon](/cont/pages/images/frontmatter-icon.png)
+![Title with icon](/en/cont/pages/images/frontmatter-icon.png)
 
 ### Ordering sibling menu/page entries
 
