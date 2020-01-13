@@ -35,6 +35,10 @@ Note that some of these parameters are explained in details in other sections of
   disableLanguageSwitchingButton = false
   # Hide breadcrumbs in the header and only show the current page title
   disableBreadcrumb = true
+  # If set to true, prevents Hugo from including the mermaid module if not needed (will reduce load times and traffic)
+  disableMermaid = false
+  # Specifies the remote location of the mermaid js
+  mermaidURL = "https://unpkg.com/browse/mermaid@8.4.5/dist/mermaid.min.js"
   # Hide Next and Previous page buttons normally displayed full height beside content
   disableNextPrev = true
   # Order sections in menu by "weight" or "title". Default to "weight"
