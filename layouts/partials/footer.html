@@ -66,7 +66,6 @@
     <script src="{{"js/modernizr.custom-3.6.0.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
     <script src="{{"js/learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
     <script src="{{"js/hugo-learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
-    {{ .Params.disableMermaid }}
     {{ if (or (not .Params.disableMermaid) (not .Site.Params.disableMermaid)) }}
         {{ if isset .Params "mermaidURL" }}
             <script src="{{ .Params.mermaidURL }}"></script>
