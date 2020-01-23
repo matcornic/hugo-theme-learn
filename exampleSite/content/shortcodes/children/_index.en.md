@@ -22,9 +22,9 @@ Use the children shortcode to list the child pages of a page and the further des
 
 {{% children %}}
 
-	{{%/* children description="true"   */%}}
+	{{%/* children description="true" */%}}
 
-{{%children description="true"   %}}
+{{%children description="true" %}}
 
 	{{%/* children depth="3" showhidden="true" */%}}
 

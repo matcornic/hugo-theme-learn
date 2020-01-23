@@ -4,11 +4,11 @@ title: Organisation des pages
 weight: 5
 ---
 
-Dans **Hugo**, les pages sont le coeur de votre site. Une fois configurées, les pages sont la valeur ajoutée de votre site de documentation.
+Dans **Hugo**, les pages sont le cœur de votre site. Une fois configurées, les pages sont la valeur ajoutée de votre site de documentation.
 
 ## Dossiers
 
-Organisez votre site comment n'importe quel autre [projet Hugo](https://gohugo.io/content/organization/). Typiquement, vous allez avoir un dossier *content* avec vos pages.
+Organisez votre site comme n'importe quel autre [projet Hugo](https://gohugo.io/content/organization/). Typiquement, vous allez avoir un dossier *content* avec vos pages.
 
     content
     ├── niveau-un 
@@ -35,7 +35,7 @@ Organisez votre site comment n'importe quel autre [projet Hugo](https://gohugo.i
     └── premiere-page.md                <-- /premiere-page
 
 {{% notice note %}}
-Le fichier `_index.md` est obligatoire dans chaque dossier, c'est en quelques rotes votre page d'accueil pour le dossier.
+Le fichier `_index.md` est obligatoire dans chaque dossier, c'est en quelque sorte votre page d'accueil pour le dossier.
 {{% /notice %}}
 
 ## Types
