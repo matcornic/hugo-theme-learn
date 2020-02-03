@@ -262,7 +262,11 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding-bottom: 0;
 }
 #sidebar ul.topics li.parent ul, #sidebar ul.topics > li.active ul {
-    display: block;
+    display: none;
+}
+
+nav#sidebar ul.topics li.parent > ul {
+	display: block;
 }
 #sidebar ul.topics > li > a {
     line-height: 2rem;
