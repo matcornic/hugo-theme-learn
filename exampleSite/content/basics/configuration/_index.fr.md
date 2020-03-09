@@ -34,7 +34,7 @@ Notez que certains de ces paramètres sont expliqués en détails dans d'autres 
   # Si défini à true, empêche Hugo d'inclure le module "mermaid" s'il n'est pas nécessaire (réduira les temps de chargement et le trafic)
   disableMermaid = false
   # Spécifie l'emplacement distant du mermaid js
-  mermaidURL = "https://unpkg.com/browse/mermaid@8.4.5/dist/mermaid.min.js"
+  mermaidURL = "https://unpkg.com/mermaid@8.4.5/dist/mermaid.min.js"
   # Quand vous utilisez un site multi-langue, utilisez ce paramètre pour désactiver le bouton de changement de langue.
   disableLanguageSwitchingButton = false
   # Ordonne les sections dans menu par poids ("weight") ou titre ("title"). Défaut à "weight"
