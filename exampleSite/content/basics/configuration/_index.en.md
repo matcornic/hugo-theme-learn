@@ -31,6 +31,9 @@ Note that some of these parameters are explained in details in other sections of
   disableInlineCopyToClipBoard = false
   # A title for shortcuts in menu is set by default. Set this to true to disable it. 
   disableShortcutsTitle = false
+  # If set to false, a Home button will appear below the search bar on the menu.
+  # It is redirecting to the landing page of the current language if specified. (Default is "/")
+  disableLandingPageButton = true
   # When using mulitlingual website, disable the switch language button.
   disableLanguageSwitchingButton = false
   # Hide breadcrumbs in the header and only show the current page title
@@ -56,3 +59,36 @@ Learn theme uses the last improvement available in hugo version 20+ to generate 
 
 > Hugo generate lunrjs index.json at the root of public folder. 
 > When you build the site with `hugo server`, hugo generates it internally and of course it doesn’t show up in the filesystem
+
+
+## Home Button Configuration
+
+If the `disableLandingPage` option is set to `false`, an Home button will appear
+on the left menu. It is an alternative for clicking on the logo. To edit the
+appearance, you will have to configure two parameters for the defined languages:
+
+```toml
+[Lanugages]
+[Lanugages.en]
+...
+landingPageURL = "/en"
+landingPageName = "<i class='fas fa-home'></i> Redirect to Home"
+...
+[Lanugages.fr]
+...
+landingPageURL = "/fr"
+landingPageName = "<i class='fas fa-home'></i> Accueil"
+...
+```
+
+If those params are not configured for a specific language, they will get their
+default values:
+
+```toml
+landingPageURL = "/"
+landingPageName = "<i class='fas fa-home'></i> Home"
+```
+
+The home button is going to looks like this:
+
+![Default Home Button](/en/basics/configuration/images/home_button_defaults.jpg?width=100%)
