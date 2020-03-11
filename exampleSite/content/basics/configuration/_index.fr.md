@@ -31,6 +31,9 @@ Notez que certains de ces paramètres sont expliqués en détails dans d'autres 
   disableInlineCopyToClipBoard = false
   # Un titre est défini par défaut lorsque vous utilisez un raccourci dans le menu. Utilisez ce paramètre pour le cacher. 
   disableShortcutsTitle = false
+  # S'il est réglé sur faux, un bouton Accueil apparaîtra sous la barre de recherche dans le menu.
+  # Il redirige vers la page d'accueil de la langue actuelle si cela est spécifié. (La valeur par défaut est "/")
+  disableLandingPageButton = true
   # Quand vous utilisez un site multi-langue, utilisez ce paramètre pour désactiver le bouton de changement de langue.
   disableLanguageSwitchingButton = false
   # Ordonne les sections dans menu par poids ("weight") ou titre ("title"). Défaut à "weight"
@@ -52,3 +55,36 @@ Le thème *Learn* utilise les dernières améliorations d'Hugo pour générer un
 
 > Hugo génère lunrjs index.json à la racine du dossier `public`. 
 > Quand vous générez le site avec `hugo server`, Hugo génère le fichier en mémoire, il n'est donc pas disponible sur le disque.
+
+## Configuration du bouton Accueil
+
+Si l'option `disableLandingPage` est définie sur `false`, un bouton
+"Accueil" apparaîtra dans le menu de gauche. C'est une alternative pour cliquer
+sur le logo. Pour modifier le vous devrez configurer deux paramètres pour les
+langues définies :
+
+```toml
+[Lanugages]
+[Lanugages.en]
+...
+landingPageURL = "/en"
+landingPageName = "<i class='fas fa-home'></i> Redirect to Home"
+...
+[Lanugages.fr]
+...
+landingPageURL = "/fr"
+landingPageName = "<i class='fas fa-home'></i> Accueil"
+...
+```
+
+Si ces paramètres ne sont pas configurés pour une langue spécifique, ils
+obtiendront leur valeurs par défaut:
+
+```toml
+landingPageURL = "/"
+landingPageName = "<i class='fas fa-home'></i> Home"
+```
+
+Le bouton d'accueil va ressembler à ceci:
+
+![Default Home Button](/en/basics/configuration/images/home_button_defaults.jpg?width=100%)
