@@ -46,7 +46,7 @@ echo "Hello World!"
 {{% /tab %}}
 {{< /tabs >}}
 
-Tabs views with the same tabs that belong to the same group sychronize their selection:
+Tab views with the same tabs that belong to the same group sychronize their selection:
 
 {{< tabs >}}
 {{% tab name="python" %}}
@@ -88,7 +88,7 @@ echo "Hello World!"
 	{{%/* /tab */%}}
 	{{</* /tabs */>}}
 
-renders as
+Renders as:
 
 {{< tabs groupId="config" >}}
 {{% tab name="json" %}}
@@ -103,7 +103,7 @@ renders as
 <Hello>World</Hello>
 ```
 {{% /tab %}}
-{{% tab name="properties" %}}
+{{k% tab name="properties" %}}
 ```properties
 Hello = World
 ```
