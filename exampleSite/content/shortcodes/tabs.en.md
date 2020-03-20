@@ -103,7 +103,7 @@ Renders as:
 <Hello>World</Hello>
 ```
 {{% /tab %}}
-{{k% tab name="properties" %}}
+{{% tab name="properties" %}}
 ```properties
 Hello = World
 ```
