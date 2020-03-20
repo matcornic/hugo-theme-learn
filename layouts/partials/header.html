@@ -17,6 +17,7 @@
     <link href="{{"css/auto-complete.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/atom-one-dark-reasonable.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    <link href="{{"css/tabs.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hugo-theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{with .Site.Params.themeVariant}}
       <link href="{{(printf "css/theme-%s.css" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
@@ -71,7 +72,7 @@
                  {{if $showBreadcrumb}}
                     {{ template "breadcrumb" dict "page" . "value" .Title }}
                  {{ else }}
-                   {{ .Title }} 
+                   {{ .Title }}
                  {{ end }}
                   </span>
                 </div>
@@ -101,7 +102,7 @@
           {{$parent := .page.Parent }}
           {{ if $parent }}
             {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.RelPermalink $parent.Title .value) }}
-            {{ template "breadcrumb" dict "page" $parent "value" $value }} 
+            {{ template "breadcrumb" dict "page" $parent "value" $value }}
           {{else}}
             {{.value|safeHTML}}
           {{end}}

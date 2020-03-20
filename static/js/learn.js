@@ -47,6 +47,22 @@ function fallbackMessage(action) {
     return actionMsg;
 }
 
+function switchTab(tabGroup, tabId) {
+    allTabItems = jQuery("[data-tab-group='"+tabGroup+"']");
+    targetTabItems = jQuery("[data-tab-group='"+tabGroup+"'][data-tab-item='"+tabId+"']");
+
+    // save button position relative to viewport
+    var yposButton = event.target.getBoundingClientRect().top;
+
+    allTabItems.removeClass("active");
+    targetTabItems.addClass("active");
+
+    // reset screen to the same position relative to clicked button to prevent page jump
+    var yposButtonDiff = event.target.getBoundingClientRect().top - yposButton;
+    window.scrollTo(window.scrollX, window.scrollY+yposButtonDiff);
+
+}
+
 // for the window resize
 $(window).resize(function() {
     setMenuHeight();
@@ -229,7 +245,7 @@ jQuery(document).ready(function() {
              e.stopPropagation();
          }
      });
-    
+
     jQuery(document).keydown(function(e) {
       // prev links - left arrow key
       if(e.which == '37') {
@@ -264,7 +280,7 @@ jQuery(document).ready(function() {
         });
     }
 
-    /** 
+    /**
     * Fix anchor scrolling that hides behind top nav bar
     * Courtesy of https://stackoverflow.com/a/13067009/28106
     *
@@ -346,7 +362,7 @@ jQuery(document).ready(function() {
 
         $(document).ready($.proxy(anchorScrolls, 'init'));
     })(window.document, window.history, window.location);
-    
+
 });
 
 jQuery(window).on('load', function() {
