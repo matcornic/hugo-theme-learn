@@ -22,11 +22,13 @@ var images = $("div#body-inner img").not(".inline");
 images.wrap(function(){
   var image =$(this);
   var o = getUrlParameter(image[0].src);
-  var f = o['featherlight'];
-  // IF featherlight is false, do not use feather light
-  if (f != 'false') {
-    if (!image.parent("a").length) {
-      return "<a href='" + image[0].src + "' data-featherlight='image'></a>";
+  if (typeof o !== "undefined") {
+    var f = o['featherlight'];
+    // IF featherlight is false, do not use feather light
+    if (f != 'false') {
+      if (!image.parent("a").length) {
+        return "<a href='" + image[0].src + "' data-featherlight='image'></a>";
+      }
     }
   }
 });
