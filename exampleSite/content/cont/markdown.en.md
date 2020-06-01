@@ -164,7 +164,7 @@ and this HTML:
 <em>rendered as italicized text</em>
 ```
 
-### strikethrough
+### Strikethrough
 
 In GFM (GitHub flavored Markdown) you can do strikethroughs.
 
@@ -420,7 +420,7 @@ HTML:
 
 Use "fences"  ```` ``` ```` to block in multiple lines of code.
 
-```markup
+```markdown
 Sample text here...
 ```
 
@@ -434,9 +434,13 @@ HTML:
 
 ### Syntax highlighting
 
-GFM, or "GitHub Flavored Markdown" also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code "fence", ` ```js `, and syntax highlighting will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:
+GFM, or "GitHub Flavored Markdown" also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code "fence", ` ```js `, and syntax highlighting will automatically be applied in the rendered HTML.
 
-<!-- markdownlint-disable MD046 -->
+See [Code Highlighting]({{< ref "syntaxhighlight.md" >}}) for additional documentation.
+
+For example, to apply syntax highlighting to JavaScript code:
+
+```plaintext
     ```js
     grunt.initConfig({
       assemble: {
@@ -457,7 +461,7 @@ GFM, or "GitHub Flavored Markdown" also supports syntax highlighting. To activat
       }
     };
     ```
-<!-- markdownlint-disable MD046 -->
+```
 
 Renders to:
 
