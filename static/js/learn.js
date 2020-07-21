@@ -350,22 +350,6 @@ jQuery(document).ready(function() {
 });
 
 jQuery(window).on('load', function() {
-
-    function adjustForScrollbar() {
-        if ((parseInt(jQuery('#body-inner').height()) + 83) >= jQuery('#body').height()) {
-            jQuery('.nav.nav-next').css({ 'margin-right': getScrollBarWidth() });
-        } else {
-            jQuery('.nav.nav-next').css({ 'margin-right': 0 });
-        }
-    }
-
-    // adjust sidebar for scrollbar
-    adjustForScrollbar();
-
-    jQuery(window).smartresize(function() {
-        adjustForScrollbar();
-    });
-
     // store this page in session
     sessionStorage.setItem(jQuery('body').data('url'), 1);
 
