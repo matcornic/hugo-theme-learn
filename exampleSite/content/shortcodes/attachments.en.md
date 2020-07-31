@@ -31,7 +31,7 @@ Currently, it support two implementations for pages
 
 Be aware that if you use a multilingual website, you will need to have as many folders as languages.
 
-That's all !
+That's all!
 
 ### Parameters
 
