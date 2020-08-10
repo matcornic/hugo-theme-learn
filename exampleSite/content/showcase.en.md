@@ -13,4 +13,4 @@ disableToc: true
 ![docs.inteliver.com image](/images/showcase/inteliver_docs.png?width=50pc)
 
 #### [TutsWiki](https://tutswiki.com/) by Chankey Pathak
-![tutswiki.com image](/images/showcase/tutswiki.png?width=50pc)
+![tutswiki.com image](/images/showcase/tutswiki.PNG?width=50pc)
