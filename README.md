@@ -95,3 +95,9 @@ Somewhat work-in-progress steps to release with [gren](https://github.com/github
   ```shell
   gren release -t <tag>
   ```
+
+## Showcase
+
+Below is a list of sites that are built using this theme.
+
+- TutsWiki [Website](https://tutswiki.com/) | [Source](https://github.com/TutsWiki/source)
