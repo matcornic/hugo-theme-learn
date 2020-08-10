@@ -1,5 +1,41 @@
 /* Insert here special css for hugo theme, on top of any other imported css */
 
+/* Language display style borrowed from scotch.io. Thanks! */
+pre {
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  padding: 50px 40px 30px;
+  z-index: 1;
+}
+
+pre:after {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: #ddd;
+}
+
+pre:before {
+  content: attr(data-title);
+  position: absolute;
+  top: 7px;
+  padding: 0 10px 3px;
+  font-size: 10px;
+  text-align: right;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  border-radius: 0 0 5px 5px;
+  background: #ddd;
+}
 
 /* Table of contents */
 
@@ -250,5 +286,5 @@ figcaption h4 {
 }
 
 .is-sticky #top-bar {
-  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
