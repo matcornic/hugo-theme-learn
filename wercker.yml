@@ -13,4 +13,4 @@ build:
     - script:
         name: build site
         code: |
-          cd exampleSite && hugo
+          cd exampleSite && hugo --minify
