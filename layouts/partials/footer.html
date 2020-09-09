@@ -70,6 +70,7 @@
     <link href="{{"mermaid/mermaid.css" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet" />
     <script src="{{"mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
     <script>
+	mermaid.flowchartConfig = { width: '100%'  };
         mermaid.initialize({ startOnLoad: true });
     </script>
     {{ partial "custom-footer.html" . }}
