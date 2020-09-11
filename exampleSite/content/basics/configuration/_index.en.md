@@ -64,3 +64,14 @@ Learn theme uses the last improvement available in hugo version 20+ to generate 
 
 > Hugo generate lunrjs index.json at the root of public folder.
 > When you build the site with `hugo server`, hugo generates it internally and of course it doesn’t show up in the filesystem
+
+## Mermaid
+
+The mermaid configuration parameters can also be set on a specific page. In this case, the global parameter would be overwritten by the local one.
+
+> Example:
+>
+> Mermaid is globally disabled. By default it won't be loaded by any page.  
+> On page "Architecture" you need a class diagram. You can set the mermaid parameters locally to only load mermaid on this page (not on the others).
+
+You also can disable mermaid for specific pages while globally enabled.
