@@ -15,7 +15,7 @@ hugo new site <new_project>
 
 ## Install the theme
 
-Install the **Hugo-theme-learn** theme by following [this documentation](https://gohugo.io/themes/installing/)
+Install the **Hugo-theme-learn** theme by following [this documentation](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)
 
 This theme's repository is: https://github.com/matcornic/hugo-theme-learn.git
 

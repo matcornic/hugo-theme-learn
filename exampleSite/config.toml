@@ -16,6 +16,7 @@ defaultContentLanguageInSubdir= true
   disableBreadcrumb = false
   disableNextPrev = false
   disableMermaid = false
+  titleSeparator = "::"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
