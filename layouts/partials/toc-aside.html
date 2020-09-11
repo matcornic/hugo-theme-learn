@@ -1,0 +1,9 @@
+<div class="toc toc-aside" data-max-depth="{{ .Params.tocMaxdepth }}">
+	{{ .TableOfContents }}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(initAsideToc, 0);
+    });
+</script>

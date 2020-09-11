@@ -1,0 +1,120 @@
+/* navbar */
+
+.progress ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.progress .wrapper #TableOfContents {
+    font-size: 13px !important;
+    max-height: 85vh;
+    overflow: auto;
+    padding: 15px !important;
+}
+
+.progress .wrapper #TableOfContents > ul > li > ul > li > ul li {
+    margin-right: 8px;
+}
+
+.progress .wrapper #TableOfContents > ul > li > a {
+    font-weight: bold;
+    padding: 0 18px;
+    margin: 0 2px;
+}
+
+.progress .wrapper #TableOfContents > ul > li > ul > li > a {
+    font-weight: bold;
+}
+
+.progress .wrapper #TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li {
+    display: none;
+}
+
+/* page */
+.toc.toc-page ul {
+    list-style: none;
+}
+
+/* aside */
+.toc.toc-aside {
+    visibility: hidden;
+}
+
+.toc.toc-aside .d-none {
+    display: none;
+}
+
+.toc.toc-aside-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.toc.toc-aside #TableOfContents {
+    overflow-y: scroll;
+    max-height: calc(100vh - 48px);
+}
+
+.toc.toc-aside #TableOfContents a {
+    color: #99979c;
+}
+
+@media only all and (max-width: 48em) {
+    .toc.toc-aside-wrapper {
+        flex-wrap: wrap-reverse;
+    }
+    .toc.toc-aside #TableOfContents {
+        max-height: inherit;
+    }
+}
+
+.toc.toc-aside-wrapper .toc.toc-aside, .toc.toc-aside-wrapper .sticky-wrapper {
+    flex-basis: 25%;
+    min-width: 235px;
+}
+
+.toc.toc-aside-wrapper #body-inner {
+    flex-basis: 75%;
+    max-width: 100%;
+}
+
+.toc.toc-aside-wrapper #body-inner h2,
+.toc.toc-aside-wrapper #body-inner h3,
+.toc.toc-aside-wrapper #body-inner h4,
+.toc.toc-aside-wrapper #body-inner h5 {
+    word-break: break-word;
+}
+
+.toc.toc-aside-wrapper .toc.toc-aside {
+    visibility: visible;
+    padding-left: 12px;
+}
+
+.toc.toc-aside #TableOfContents ul {
+    list-style: none;
+}
+
+.toc.toc-aside #TableOfContents ul,
+.toc.toc-aside #TableOfContents li {
+    padding-left: 0;
+}
+
+.toc.toc-aside #TableOfContents a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.toc.toc-aside #TableOfContents li > a {
+    padding-left: 4px;
+}
+
+.toc.toc-aside #TableOfContents li li > a {
+    padding-left: 14px;
+}
+
+.toc.toc-aside #TableOfContents li.active > a {
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: var(--MENU-HEADER-BG-color);
+}
