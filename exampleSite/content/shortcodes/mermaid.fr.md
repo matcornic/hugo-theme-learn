@@ -26,6 +26,26 @@ graph LR;
     C -->|Deux| E[Résultat deux]
 {{< /mermaid >}}
 
+or you can use this alternative syntax:
+
+    ```mermaid
+    graph LR;
+        A[Bords droits] -->|Lien texte| B(Bords arondis)
+        B --> C{Décision}
+        C -->|Un| D[Résultat un]
+        C -->|Deux| E[Résultat deux]
+    ```
+
+renders as
+
+```mermaid
+graph LR;
+    A[Bords droits] -->|Lien texte| B(Bords arondis)
+    B --> C{Décision}
+    C -->|Un| D[Résultat un]
+    C -->|Deux| E[Résultat deux]
+```
+
 ## Sequence example
 
     {{</*mermaid*/>}}
