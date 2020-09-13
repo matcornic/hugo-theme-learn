@@ -75,7 +75,9 @@
             <script src="{{"mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
         {{ end }}
         <script>
-            mermaid.initialize({ startOnLoad: true });
+            if (mermaid) {
+                mermaid.startOnLoad = false;
+            }
         </script>
     {{ end }}
     {{ partial "custom-footer.html" . }}
