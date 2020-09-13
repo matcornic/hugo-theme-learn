@@ -370,7 +370,7 @@ $(function() {
 
 jQuery.extend({
     highlight: function(node, re, nodeName, className) {
-        if (node.nodeType === 3) {
+        if (node.nodeType === 3 && node.parentElement.namespaceURI == 'http://www.w3.org/1999/xhtml') { // text nodes
             var match = node.data.match(re);
             if (match) {
                 var highlight = document.createElement(nodeName || 'span');
