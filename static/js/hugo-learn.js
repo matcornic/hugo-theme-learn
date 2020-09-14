@@ -10,10 +10,8 @@ var getUrlParameter = function getUrlParameter(sPageURL) {
           sParameterName = sURLVariables[i].split('=');
           obj[sParameterName[0]] = sParameterName[1];
       }
-      return obj;
-    } else {
-      return undefined;
     }
+    return obj;
 };
 
 // Execute actions on images generated from Markdown pages

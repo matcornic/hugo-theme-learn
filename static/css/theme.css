@@ -1078,12 +1078,12 @@ pre .copy-to-clipboard {
     position: absolute;
     right: 4px;
     top: 4px;
-    background-color: #949bab;
+    background-color: #C1C4C6;
     color: #ccc;
     border-radius: 2px;
 }
 pre .copy-to-clipboard:hover {
-    background-color: #656c72;
+    background-color: #00bdf3;
     color: #fff;
 }
 .parent-element {
