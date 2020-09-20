@@ -10,12 +10,16 @@ Le shortcode *Notice* permet d'afficher 4 types de message pour vous aider à st
 ```
 {{%/* notice note */%}}
 Une notice de type *note*
+
+Une notice de type *note*
 {{%/* /notice */%}}
 ```
 
 s'affiche comme
 
 {{% notice note %}}
+Une notice de type *note*
+
 Une notice de type *note*
 {{% /notice %}}
 

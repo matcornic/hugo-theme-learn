@@ -10,6 +10,8 @@ The notice shortcode shows 4 types of disclaimers to help you structure your pag
 ```
 {{%/* notice note */%}}
 A notice disclaimer
+
+A second paragraph in the disclaimer
 {{%/* /notice */%}}
 ```
 
@@ -17,6 +19,8 @@ renders as
 
 {{% notice note %}}
 A notice disclaimer
+
+A second paragraph in the disclaimer
 {{% /notice %}}
 
 ### Info
