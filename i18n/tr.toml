@@ -24,3 +24,15 @@ other = "Dahası Var"
 
 [Expand-title]
 other = "Genişlet..."
+
+[note]
+other = "Note"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tip"
+
+[warning]
+other = "Warning"

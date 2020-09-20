@@ -24,3 +24,15 @@ other = "المزيد"
 
 [Expand-title]
 other = "...قم بتوسيع"
+
+[note]
+other = "Note"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tip"
+
+[warning]
+other = "Warning"

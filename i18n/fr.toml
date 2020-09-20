@@ -24,3 +24,15 @@ other = "Aller plus loin"
 
 [Expand-title]
 other = "Déroulez-moi..."
+
+[note]
+other = "Remarque"
+
+[info]
+other = "Information"
+
+[tip]
+other = "Astuce"
+
+[warning]
+other = "Avertissement"
