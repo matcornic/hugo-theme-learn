@@ -35,6 +35,8 @@ Notez que certains de ces paramètres sont expliqués en détails dans d'autres 
   disableMermaid = false
   # Spécifie l'emplacement distant du mermaid js
   customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+  # Initialization parameter for mermaid, see mermaid documentation
+  mermaidInitialize = "{ \"startOnLoad\": true }"
   # Quand vous utilisez un site multi-langue, utilisez ce paramètre pour désactiver le bouton de changement de langue.
   disableLanguageSwitchingButton = false
   # Ordonne les sections dans menu par poids ("weight") ou titre ("title"). Défaut à "weight"

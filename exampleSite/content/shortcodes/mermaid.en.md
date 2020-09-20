@@ -7,12 +7,14 @@ description : "Generation of diagram and flowchart from text in a similar manner
 
 Just insert your mermaid code in the `mermaid` shortcode and that's it.
 
-## Flowchart example
+## Examples
+
+### Flowchart example
 
     {{</*mermaid align="left"*/>}}
     graph LR;
         A[Hard edge] -->|Link text| B(Round edge)
-        B --> C{Decision}
+        B --> C{<strong>Decision</strong>}
         C -->|One| D[Result one]
         C -->|Two| E[Result two]
     {{</* /mermaid */>}}
@@ -22,12 +24,12 @@ renders as
 {{<mermaid align="left">}}
 graph LR;
     A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
+    B --> C{<strong>Decision</strong>}
     C -->|One| D[Result one]
     C -->|Two| E[Result two]
 {{</mermaid>}}
 
-## Sequence example
+### Sequence example
 
     {{</* mermaid */>}}
     sequenceDiagram
@@ -59,7 +61,7 @@ sequenceDiagram
     Bob-->John: Jolly good!
 {{</mermaid>}}
 
-## GANTT Example
+### GANTT Example
 
     {{</* mermaid */>}}
     gantt
@@ -78,7 +80,6 @@ sequenceDiagram
             Create tests for renderer           :2d
             Add to mermaid                      :1d
     {{</* /mermaid */>}}
-
 
 renders as
 
@@ -99,7 +100,6 @@ gantt
         Create tests for renderer           :2d
         Add to mermaid                      :1d
 {{</mermaid>}}
-
 
 ### Class example
 
@@ -122,7 +122,6 @@ gantt
 
 renders as
 
-
 {{<mermaid>}}
 classDiagram
   Class01 <|-- AveryLongClass : Cool
@@ -139,7 +138,6 @@ classDiagram
   Class01 : int gorilla
   Class08 <--> C2: Cool label
 {{</mermaid>}}
-
 
 ### Git example
 
@@ -208,3 +206,27 @@ stateDiagram-v2
   locked --> closed: Unlock
   closed --> open: Open
 {{</mermaid>}}
+
+## Configuration
+
+By default, mermaid is configured with default settings. You can customize mermaids default settings for all of your files thru a JSON object in your `config.toml` or override these settings sidewise thru your pages frontmatter.
+
+This JSON object is forwarded into mermaids `mermaid.initialize()` function.
+
+See [mermaid documentation](http://mermaid-js.github.io/mermaid/getting-started/Setup.html#mermaidapi-configuration-defaults) for all allowed settings.
+
+### Allow HTML in graphs
+
+By default newer versions of mermaid disallow HTML in graphs if you are using default settings. To enable this, set the following line in your `config.toml`
+
+````toml
+[params]
+  mermaidInitialize = "{ \"securityLevel\": \"loose\", \"startOnLoad\": true }"
+````
+
+or pages frontmatter
+````toml
++++
+mermaidInitialize = "{ \"securityLevel\": \"loose\", \"startOnLoad\": true }"
++++
+````

@@ -7,11 +7,14 @@ description : "Génération de diagrammes à partir de texte, dans le même styl
 
 Insérer votre code Mermaid dans un shortcode `mermaid` et c'est tout.
 
-## Flowchart example
+### Examples
+
+### Flowchart example
+
     {{</*mermaid align="left"*/>}}
     graph LR;
         A[Bords droits] -->|Lien texte| B(Bords arondis)
-        B --> C{Décision}
+        B --> C{<strong>Décision</strong>}
         C -->|Un| D[Résultat un]
         C -->|Deux| E[Résultat deux]
     {{</* /mermaid */>}}
@@ -21,12 +24,12 @@ renders as
 {{<mermaid align="left">}}
 graph LR;
     A[Bords droits] -->|Lien texte| B(Bords arondis)
-    B --> C{Décision}
+    B --> C{<strong>Décision</strong>}
     C -->|Un| D[Résultat un]
     C -->|Deux| E[Résultat deux]
 {{< /mermaid >}}
 
-## Sequence example
+### Sequence example
 
     {{</*mermaid*/>}}
     sequenceDiagram
@@ -58,7 +61,7 @@ sequenceDiagram
     Bob-->John: Au top!
 {{< /mermaid >}}
 
-## GANTT Example
+### GANTT Example
 
     {{</*mermaid*/>}}
     gantt
