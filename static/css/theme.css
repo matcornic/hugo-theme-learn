@@ -505,28 +505,28 @@ div.notices > div.label:first-child:before {
     margin-right: .35rem;
 }
 div.notices.info {
-    border-top-color: #6AB0DE;
+    border-color: #6AB0DE;
     background: #E7F2FA;
 }
 div.notices.info > div.label:first-child:before {
     content: "\f05a";
 }
 div.notices.warning {
-    border-top-color: rgba(217, 83, 79, 0.8);
+    border-color: rgba(217, 83, 79, 0.8);
     background: #FAE2E2;
 }
 div.notices.warning > div.label:first-child:before {
     content: "\f071";
 }
 div.notices.note {
-    border-top-color: #F0B37E;
+    border-color: #F0B37E;
     background: #FFF2DB;
 }
 div.notices.note > div.label:first-child:before {
     content: "\f06a";
 }
 div.notices.tip {
-    border-top-color: rgba(92, 184, 92, 0.8);
+    border-color: rgba(92, 184, 92, 0.8);
     background: #E6F9E6;
 }
 div.notices.tip > div.label:first-child:before {
