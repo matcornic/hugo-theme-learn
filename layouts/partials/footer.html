@@ -74,8 +74,15 @@
         {{ else }}
             <script src="{{"mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
         {{ end }}
+        {{ if isset .Params "mermaidinitialize" }}
+            {{ $.Scratch.Set "mermaidInitialize" .Params.mermaidInitialize }}
+        {{ else if isset .Site.Params "mermaidinitialize" }}
+            {{ $.Scratch.Set "mermaidInitialize" .Site.Params.mermaidInitialize }}
+        {{ else }}
+            {{ $.Scratch.Set "mermaidInitialize" "{ \"startOnLoad\": true }" }}
+        {{ end }}
         <script>
-            mermaid.initialize({ startOnLoad: true });
+            mermaid.initialize(JSON.parse({{ $.Scratch.Get "mermaidInitialize" }}));
         </script>
     {{ end }}
     {{ partial "custom-footer.html" . }}
