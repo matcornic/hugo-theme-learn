@@ -481,59 +481,56 @@ blockquote cite {
     font-size: 1.2rem;
 }
 div.notices {
-    margin: 2rem 0;
-    position: relative;
-}
-div.notices p {
-    padding: 15px;
-    display: block;
-    font-size: 1rem;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+    border-top-width: 2rem;
+    border-top-style: solid;
     color: #666;
+    margin: 2rem 0;
+    padding-bottom: .1px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-div.notices p:first-child:before {
-    position: absolute;
-    top: 2px;
+div.notices > * {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+div.notices > div.label {
     color: #fff;
+    margin-bottom: 1rem;
+    margin-top: -1.75rem;
+}
+div.notices > div.label:first-child:before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f06a";
-    left: 10px;
+    margin-left: -.35rem;
+    margin-right: .35rem;
 }
-div.notices p:first-child:after {
-    position: absolute;
-    top: 2px;
-    color: #fff;
-    left: 2rem;
-}
-div.notices.info p {
-    border-top: 30px solid #F0B37E;
-    background: #FFF2DB;
-}
-div.notices.info p:first-child:after {
-    content: 'Info';
-}
-div.notices.warning p {
-    border-top: 30px solid rgba(217, 83, 79, 0.8);
-    background: #FAE2E2;
-}
-div.notices.warning p:first-child:after {
-    content: 'Warning';
-}
-div.notices.note p {
-    border-top: 30px solid #6AB0DE;
+div.notices.info {
+    border-top-color: #6AB0DE;
     background: #E7F2FA;
 }
-div.notices.note p:first-child:after {
-    content: 'Note';
+div.notices.info > div.label:first-child:before {
+    content: "\f05a";
 }
-div.notices.tip p {
-    border-top: 30px solid rgba(92, 184, 92, 0.8);
+div.notices.warning {
+    border-top-color: rgba(217, 83, 79, 0.8);
+    background: #FAE2E2;
+}
+div.notices.warning > div.label:first-child:before {
+    content: "\f071";
+}
+div.notices.note {
+    border-top-color: #F0B37E;
+    background: #FFF2DB;
+}
+div.notices.note > div.label:first-child:before {
+    content: "\f06a";
+}
+div.notices.tip {
+    border-top-color: rgba(92, 184, 92, 0.8);
     background: #E6F9E6;
 }
-div.notices.tip p:first-child:after {
-    content: 'Tip';
+div.notices.tip > div.label:first-child:before {
+    content: "\f0eb";
 }
 
 /* attachments shortcode */
