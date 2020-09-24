@@ -39,23 +39,23 @@ That's all!
 |:--|:--|:--|
 | title | "Attachments" | List's title  |
 | style | "" | Choose between "orange", "grey", "blue" and "green" for nice style |
-| pattern | ".*" | A regular expressions, used to filter the attachments by file name. <br/><br/>The **pattern** parameter value must be [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
+| pattern | ".*" | A regular expression, used to filter the attachments by file name. The **pattern** parameter value must be a [regular expression](https://en.wikipedia.org/wiki/Regular_expression). |
 
 For example:
 
-* To match a file suffix of 'jpg', use **.*jpg** (not *.jpg).
-* To match file names ending in 'jpg' or 'png', use **.*(jpg|png)**
+* To match a file suffix of '.jpg', use `.*\.jpg$` (not `*.jpg`).
+* To match file names ending in '.jpg' or '.png', use `.*\.(jpg|png)$`.
 
 ### Examples
 
 #### List of attachments ending in pdf or mp4
 
 
-    {{%/*attachments title="Related files" pattern=".*(pdf|mp4)"/*/%}}
+    {{%/*attachments title="Related files" pattern=".*\.(pdf|mp4)$"/*/%}}
 
 renders as
 
-{{%attachments title="Related files" pattern=".*(pdf|mp4)"/%}}
+{{%attachments title="Related files" pattern=".*\.(pdf|mp4)$"/%}}
 
 #### Colored styled box
 

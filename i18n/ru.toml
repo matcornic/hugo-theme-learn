@@ -25,5 +25,11 @@ other = "Еще"
 [Expand-title]
 other = "Развернуть..."
 
-[BinaryPrefix-kilobyte]
-other = "килобайт"
+[Byte-symbol]
+other = "Б"
+
+[Kilobyte-symbol]
+other = "КБ"
+
+[Megabyte-symbol]
+other = "МБ"
