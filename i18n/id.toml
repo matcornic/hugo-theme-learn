@@ -24,3 +24,6 @@ other = "Lainnya"
 
 [Expand-title]
 other = "Bentangkan..."
+
+[BinaryPrefix-kilobyte]
+other = "kb"

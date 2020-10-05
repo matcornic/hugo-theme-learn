@@ -24,3 +24,6 @@ other = "Dahası Var"
 
 [Expand-title]
 other = "Genişlet..."
+
+[BinaryPrefix-kilobyte]
+other = "kb"

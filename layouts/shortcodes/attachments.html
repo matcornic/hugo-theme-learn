@@ -18,7 +18,7 @@
 					<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
 						{{.Name}}
 					</a>
-					({{div .Size 1024 }} ko)
+					({{div .Size 1024 }} {{T "BinaryPrefix-kilobyte"}})
 				</li>
 			{{end}}
 		{{else}}
@@ -26,7 +26,7 @@
 				<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
 					{{.Name}}
 				</a>
-				({{div .Size 1024 }} ko)
+				({{div .Size 1024 }} {{T "BinaryPrefix-kilobyte"}})
 			</li>
 		{{end}}
 	{{end}}

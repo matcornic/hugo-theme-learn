@@ -24,3 +24,6 @@ other = "Aller plus loin"
 
 [Expand-title]
 other = "Déroulez-moi..."
+
+[BinaryPrefix-kilobyte]
+other = "ko"

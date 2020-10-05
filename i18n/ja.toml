@@ -24,3 +24,6 @@ other = "更に"
 
 [Expand-title]
 other = "開く..."
+
+[BinaryPrefix-kilobyte]
+other = "kb"

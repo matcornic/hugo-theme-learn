@@ -24,3 +24,6 @@ other = "More"
 
 [Expand-title]
 other = "Expand me..."
+
+[BinaryPrefix-kilobyte]
+other = "kb"
