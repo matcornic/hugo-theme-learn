@@ -9,25 +9,7 @@ The Attachments shortcode displays a list of files attached to a page.
 
 ## Usage
 
-The shortcurt lists files found in a **specific folder**.
-Currently, it support two implementations for pages
-
-1. If your page is a markdown file, attachements must be placed in a **folder** named like your page and ending with **.files**.
-
-    > * content
-    >   * _index.md
-    >   * page.files
-    >      * attachment.pdf
-    >   * page.md
-
-2. If your page is a **folder**, attachements must be placed in a nested **'files'** folder.
-
-    > * content
-    >   * _index.md
-    >   * page
-    >      * index.md
-    >      * files
-    >          * attachment.pdf
+The shortcurt lists files/resources found in [page bundle](https://gohugo.io/content-management/page-bundles/). 
 
 Be aware that if you use a multilingual website, you will need to have as many folders as languages.
 
@@ -39,23 +21,24 @@ That's all!
 |:--|:--|:--|
 | title | "Attachments" | List's title  |
 | style | "" | Choose between "orange", "grey", "blue" and "green" for nice style |
-| pattern | ".*" | A regular expressions, used to filter the attachments by file name. <br/><br/>The **pattern** parameter value must be [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).
+| pattern | ".*" | A globbing pattern, used to filter the attachments by file name. <br/><br/>The **pattern** parameter value must be [glob pattern](https://github.com/gobwas/glob/blob/master/readme.md).
 
 For example:
 
-* To match a file suffix of 'jpg', use **.*jpg** (not *.jpg).
-* To match file names ending in 'jpg' or 'png', use **.*(jpg|png)**
+* To match a file suffix of 'jpg', use `*.jpg`.
+* To match file names ending in 'jpg' or 'png', use `*.{jpg,png}`
 
 ### Examples
 
 #### List of attachments ending in pdf or mp4
 
-
-    {{%/*attachments title="Related files" pattern=".*(pdf|mp4)"/*/%}}
+```
+{{%attachments title="Related files" pattern="*.{pdf,mp4}"/%}}
+```
 
 renders as
 
-{{%attachments title="Related files" pattern=".*(pdf|mp4)"/%}}
+{{%attachments title="Related files" pattern="*.{pdf,mp4}"/%}}
 
 #### Colored styled box
 
