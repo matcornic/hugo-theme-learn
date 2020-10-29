@@ -4,33 +4,26 @@
 		<i class="fas fa-paperclip" aria-hidden="true"></i>
 		{{with .Get "title"}}{{.}}{{else}}{{T "Attachments-label"}}{{end}}
 	</label>
-	{{if eq .Page.File.BaseFileName "index"}}
-		{{$.Scratch.Add "filesName" "files"}}
-	{{else}}
-		{{$.Scratch.Add "filesName" (printf "%s.files" .Page.File.BaseFileName)}}
-	{{end}}
 	<div class="attachments-files">
-	{{ range (readDir (printf "./content/%s%s" .Page.File.Dir ($.Scratch.Get "filesName")) ) }}
-		{{ $fileDir := replace $.Page.File.Dir "\\" "/" }}
 		{{if ($.Get "pattern")}}
-			{{if (findRE ($.Get "pattern") .Name)}}
+			{{ range ($.Page.Resources.Match ($.Get "pattern")) }}
 				<li>
-					<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
+					<a href="{{ .Permalink }}">
 						{{.Name}}
 					</a>
-					({{div .Size 1024 }} ko)
+					({{div (len .Content) 1024 }} kb)
 				</li>
 			{{end}}
 		{{else}}
-			<li>
-				<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
-					{{.Name}}
-				</a>
-				({{div .Size 1024 }} ko)
-			</li>
+			{{ range ($.Page.Resources.Match "**") }}
+				<li>
+					<a href="{{ .Permalink }}">
+						{{.Name}}
+					</a>
+					({{div (len .Content) 1024 }} kb)
+				</li>
+			{{end}}
 		{{end}}
-	{{end}}
 	</div>
 	{{.Inner}}
 </section>
-

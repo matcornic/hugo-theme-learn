@@ -18,7 +18,7 @@ This theme is a partial porting of the [Learn theme](http://learn.getgrav.org/) 
 * **Unlimited menu levels**
 * **Automatic next/prev buttons to navigate through menu entries**
 * [Image resizing, shadow...]({{%relref "cont/markdown.en.md#images" %}})
-* [Attachments files]({{%relref "shortcodes/attachments.en.md" %}})
+* [Attachments files]({{%relref "shortcodes/attachments/_index.en.md" %}})
 * [List child pages]({{%relref "shortcodes/children/_index.md" %}})
 * [Mermaid diagram]({{%relref "shortcodes/mermaid.en.md" %}}) (flowchart, sequence, gantt)
 * [Customizable look and feel and themes variants]({{%relref "basics/style-customization/_index.md"%}})
