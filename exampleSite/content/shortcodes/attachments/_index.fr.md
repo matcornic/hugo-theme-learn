@@ -17,7 +17,7 @@ Le shortcode affiche la liste de fichiers trouvés dans un [page bundle](https:/
 |:--|:--|:--|
 | title | "Pièces jointes" | Titre de la liste  |
 | style | "" | Choisir entre "orange", "grey", "blue" et "green" pour un style plus sympa |
-| pattern | ".*" | Une expression régulière, utilisée pour filtrer les pièces jointes par leur nom de fichier. <br/><br/>Le paramètre **pattern** doit être une [expression régulière](https://en.wikipedia.org/wiki/Regular_expression).
+| pattern | ".*" | Une expression glob, utilisée pour filtrer les pièces jointes par leur nom de fichier. Le paramètre `pattern` doit être une [glob pattern](https://github.com/gobwas/glob/blob/master/readme.md).
 
 Par exemple:
 

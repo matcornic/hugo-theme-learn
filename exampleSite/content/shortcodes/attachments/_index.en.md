@@ -17,7 +17,7 @@ The shortcurt lists files/resources found in the [page bundle](https://gohugo.io
 |:--|:--|:--|
 | title | "Attachments" | List's title  |
 | style | "" | Choose between "orange", "grey", "blue" and "green" for nice style |
-| pattern | ".*" | A globbing pattern, used to filter the attachments by file name. <br/><br/>The **pattern** parameter value must be [glob pattern](https://github.com/gobwas/glob/blob/master/readme.md).
+| pattern | ".*" | A glob pattern, used to filter the attachments by file name. The `pattern` parameter value must be a [glob pattern](https://github.com/gobwas/glob/blob/master/readme.md).
 
 For example:
 
