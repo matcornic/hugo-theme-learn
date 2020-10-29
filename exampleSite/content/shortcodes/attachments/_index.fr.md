@@ -9,29 +9,7 @@ Le shortcode *Attachments* affiche une liste de pièces jointes d'une page.
 
 ## Utilisation
 
-Le shortcode affiche la liste de fichiers trouvés dans un **dossier spécifique**
-A l'heure actuelle, il supporte deux implémentations
-
-1. Si votre page est un fichier Markdown, les pièces jointes doivent être placée dans un **dossier** nommé comme le nom de la page et suffixé par **.files**.
-
-    > * content
-    >   * _index.md
-    >   * page.files
-    >      * attachment.pdf
-    >   * page.md
-
-2. Si votre page est un **dossier**, les pièces jointes doivent être placées dans un dossier fils **'files'**.
-
-    > * content
-    >   * _index.md
-    >   * page
-    >      * index.md
-    >      * files
-    >          * attachment.pdf
-
-Attention, si votre site est multi-langue, vous devrez avec autant de dossier qu'il y a de langues.
-
-C'est tout !
+Le shortcode affiche la liste de fichiers trouvés dans un [page bundle](https://gohugo.io/content-management/page-bundles/).
 
 ### Paramètres
 
@@ -43,19 +21,19 @@ C'est tout !
 
 Par exemple:
 
-* Pour trouver les fichiers avec le suffixe 'jpg', utilisez **.*jpg** (pas *.jpg).
-* Pour trouver les fichiers avec les suffixe 'jpg' ou 'png', utilisez **.*(jpg|png)**
+* Pour trouver les fichiers avec le suffixe 'jpg', utilisez `*.jpg`.
+* Pour trouver les fichiers avec les suffixe 'jpg' ou 'png', utilisez `*.{jpg,png}`
 
 ### Exemples
 
 #### Lister les pièces jointes de type pdf ou mp4
 
 
-    {{%/*attachments title="Fichiers associés" pattern=".*(pdf|mp4)"/*/%}}
+    {{%/*attachments title="Fichiers associés" pattern="*.{jpg,mp4}"/*/%}}
 
 s'affiche comme
 
-{{%attachments title="Fichiers associés" pattern=".*(pdf|mp4)"/%}}
+{{%attachments title="Fichiers associés" pattern="*.{jpg,mp4}"/%}}
 
 #### Modifier le style
 
@@ -64,7 +42,6 @@ s'affiche comme
 s'affiche comme
 
 {{% attachments style="orange" /%}}
-
 
     {{%/*attachments style="grey" /*/%}}
 
@@ -77,7 +54,7 @@ s'affiche comme
 s'affiche comme
 
 {{% attachments style="blue" /%}}
-    
+
     {{%/*attachments style="green" /*/%}}
 
 s'affiche comme

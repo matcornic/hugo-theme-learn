@@ -9,11 +9,7 @@ The Attachments shortcode displays a list of files attached to a page.
 
 ## Usage
 
-The shortcurt lists files/resources found in [page bundle](https://gohugo.io/content-management/page-bundles/). 
-
-Be aware that if you use a multilingual website, you will need to have as many folders as languages.
-
-That's all!
+The shortcurt lists files/resources found in the [page bundle](https://gohugo.io/content-management/page-bundles/).
 
 ### Parameters
 
@@ -46,10 +42,9 @@ renders as
 
 {{% attachments style="orange" /%}}
 
-
     {{%/*attachments style="grey" /*/%}}
 
-renders as 
+renders as
 
 {{% attachments style="grey" /%}}
 
@@ -58,7 +53,7 @@ renders as
 renders as
 
 {{% attachments style="blue" /%}}
-    
+
     {{%/*attachments style="green" /*/%}}
 
 renders as
