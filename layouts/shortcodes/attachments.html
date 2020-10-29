@@ -11,7 +11,7 @@
 					<a href="{{ .Permalink }}">
 						{{.Name}}
 					</a>
-					({{div ((os.Stat (.RelPermalink)).Size) 1024 }} kb)
+					({{div (len .Content) 1024 }} kb)
 				</li>
 			{{end}}
 		{{else}}
@@ -20,7 +20,7 @@
 					<a href="{{ .Permalink }}">
 						{{.Name}}
 					</a>
-					({{div ((os.Stat (.RelPermalink)).Size) 1024 }} kb)
+					({{div (len .Content) 1024 }} kb)
 				</li>
 			{{end}}
 		{{end}}
