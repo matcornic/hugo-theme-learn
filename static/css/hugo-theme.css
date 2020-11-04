@@ -16,20 +16,23 @@
     padding: 15px !important;
 }
 
+/* Depth 1 */
+#TableOfContents > ul > li > a {
+  font-weight: bold;
+}
 
+/* Depth 2 */
+#TableOfContents > ul > li > ul > li > a {
+  padding: 0 10px; margin: 0 2px;
+}
+
+/* Depth 3 */
 #TableOfContents > ul > li > ul > li > ul li {
   margin-right: 8px;
 }
 
-#TableOfContents > ul > li > a   {
-  font-weight: bold; padding: 0 18px; margin: 0 2px;
-}
-
-#TableOfContents > ul > li > ul > li > a {
-  font-weight: bold;
-}
-
-#TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li  {
+/* Depth 5 */
+#TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li {
     display: none;
 }
 
@@ -250,5 +253,5 @@ figcaption h4 {
 }
 
 .is-sticky #top-bar {
-  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
