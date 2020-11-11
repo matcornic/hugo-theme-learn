@@ -24,3 +24,15 @@ other = "Еще"
 
 [Expand-title]
 other = "Развернуть..."
+
+[note]
+other = "Заметка"
+
+[info]
+other = "Информация"
+
+[tip]
+other = "Совет"
+
+[warning]
+other = "Внимание"

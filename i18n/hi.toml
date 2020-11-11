@@ -24,3 +24,15 @@ other = "अधिक सामग्री दिखाएं"
 
 [Expand-title]
 other = "विस्तार करे..."
+
+[note]
+other = "Note"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tip"
+
+[warning]
+other = "Warning"

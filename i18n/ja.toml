@@ -24,3 +24,15 @@ other = "更に"
 
 [Expand-title]
 other = "開く..."
+
+[note]
+other = "Note"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tip"
+
+[warning]
+other = "Warning"

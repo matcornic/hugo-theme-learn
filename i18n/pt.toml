@@ -24,3 +24,15 @@ other = "Mais"
 
 [Expand-title]
 other = "Expandir..."
+
+[note]
+other = "Nota"
+
+[info]
+other = "Informação"
+
+[tip]
+other = "Dica"
+
+[warning]
+other = "Aviso"

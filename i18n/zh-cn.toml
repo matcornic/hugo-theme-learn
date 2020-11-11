@@ -24,3 +24,15 @@ other = "更多"
 
 [Expand-title]
 other = "展开"
+
+[note]
+other = "注释"
+
+[info]
+other = "信息"
+
+[tip]
+other = "提示"
+
+[warning]
+other = "警告"

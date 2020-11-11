@@ -24,3 +24,15 @@ other = "Lainnya"
 
 [Expand-title]
 other = "Bentangkan..."
+
+[note]
+other = "Note"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tip"
+
+[warning]
+other = "Warning"
