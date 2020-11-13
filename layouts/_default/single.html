@@ -1,6 +1,14 @@
 {{ partial "header.html" . }}
 
-{{ .Content }}
+{{$wikilinks := .Content | findRE "\\[\\[([^/]+)\\]\\]" }}
+{{$temp_content := $.Content}}
+{{range $wikilinks}} 
+    {{$page_title := . | strings.TrimPrefix "[[" | strings.TrimSuffix "]]" }}
+    {{range first 1 (where site.Pages "Params.title" $page_title)}}
+        {{$temp_content = ($temp_content | replaceRE (printf "\\[\\[%s\\]\\]" $page_title) (printf "<a href=\"%s\">[[%s]]</a>" .Permalink $page_title) )}}
+    {{end}}
+{{end}}
+{{$temp_content  | safeHTML}}
 
 <footer class="footline">
 	{{with .Params.LastModifierDisplayName}}
