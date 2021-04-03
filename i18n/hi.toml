@@ -25,5 +25,11 @@ other = "अधिक सामग्री दिखाएं"
 [Expand-title]
 other = "विस्तार करे..."
 
-[BinaryPrefix-kilobyte]
-other = "kb"
+[Byte-symbol]
+other = "B"
+
+[Kilobyte-symbol]
+other = "KB"
+
+[Megabyte-symbol]
+other = "MB"
