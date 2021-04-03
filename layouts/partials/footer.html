@@ -78,6 +78,25 @@
             mermaid.initialize({ startOnLoad: true });
         </script>
     {{ end }}
+
+    {{ if (or (and (ne .Params.disableMathJax nil) (not .Params.disableMathJax)) (not .Site.Params.disableMathJax)) }}
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'ams'
+        },
+        svg: {fontCache: 'global'},
+        options: {
+          ignoreHtmlClass: "no-mathjax",
+          processHtmlClass: "mathjax",
+
+        }
+      };
+    </script>
+    <script src="{{"js/mathjax.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+    {{ end }}
+
     {{ partial "custom-footer.html" . }}
   </body>
 </html>
