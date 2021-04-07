@@ -55,6 +55,12 @@ body #chapter h1 {
         font-size: 2rem;
     }
 }
+.expand-content {
+    padding-left: 30px;
+}
+.expand-label:hover {
+    color: #00bdf3;
+}
 a {
     color: #00bdf3;
 }
