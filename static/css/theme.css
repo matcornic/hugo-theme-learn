@@ -372,6 +372,11 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
         display: table;
     }
 }
+@media print {
+    #body #navigation {
+        display: none;
+    }
+}
 #body .nav {
     position: fixed;
     top: 0;
@@ -412,9 +417,6 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #body .nav.nav-next {
     right: 0;
 }
-#body-inner {
-    margin-bottom: 5rem;
-}
 #chapter {
     display: flex;
     align-items: center;
@@ -423,7 +425,6 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding: 2rem 0;
 }
 #chapter #body-inner {
-    padding-bottom: 3rem;
     max-width: 80%;
 }
 #chapter h3 {
@@ -994,11 +995,26 @@ td {
     height: 0;
     min-height: 3rem;
 }
+@media print {
+    #body #top-bar{
+        background-color: #fff; /* avoid background bleeding*/
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
+        padding-left: 0; /* for print, we want to align with the footer to ease the layout */
+        color: #777;
+    }
+}
 #top-github-link {
     position: relative;
     z-index: 1;
     float: right;
     display: block;
+}
+@media print {
+    /* we don't need this while printing */
+    #top-github-link {
+        display: none;
+    }
 }
 #body #breadcrumbs {
     height: auto;
@@ -1140,4 +1156,15 @@ pre .copy-to-clipboard:hover {
 
 option {
     color: initial;
+}
+
+@media print {
+    /* in print mode show footer line to signal reader
+    the end of document */
+    .footline {
+        border-top: 1px solid #ddd;
+        color: #777;
+        margin-top: 1.5rem;
+        padding-top: .75rem;
+    }
 }

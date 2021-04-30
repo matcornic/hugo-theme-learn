@@ -3,6 +3,13 @@
 
 /* Table of contents */
 
+@media print {
+  /* we don't need this while printing */
+  .progress {
+    display: none !important;
+  }
+}
+
 .progress ul {
   list-style: none;
   margin: 0;
@@ -48,6 +55,16 @@ body {
 #body a.highlight:hover:after, #body a.highlight:focus:after {
     width: 100%;
 }
+@media print {
+  #body #body-inner a {
+    /* in print we want to distinguish links in our content from
+    normal text even if printed black/white;
+    don't use a.highlight in selector to also get links that are
+    put as HTML into markdown */
+    text-decoration-line: underline;
+  }
+}
+
 .progress {
     position:absolute;
     background-color: rgba(246, 246, 246, 0.97);
@@ -62,11 +79,23 @@ body {
   padding-right: 1rem !important;
   margin-right: 0.5rem !important;
 }
+@media print {
+  /* we don't need this while printing */
+  #toc-menu {
+    display: none;
+  }
+}
 
 #sidebar-toggle-span {
   border-right: thin solid #DAD8D8 !important;
   padding-right: 0.5rem !important;
   margin-right: 1rem !important;
+}
+@media print {
+  /* we don't need this while printing */
+  #sidebar-toggle-span {
+    display: none;
+  }
 }
 
 .btn {
@@ -235,7 +264,24 @@ figcaption h4 {
       display: none;
   }
 }
+@media print {
+  #breadcrumbs .links {
+      display: inline;
+  }
+}
 
 .is-sticky #top-bar {
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1); 
+}
+@media print {
+  /* the header is sticky which is not suited for print;
+  because there are inline styles set, we have to use !important here
+  to remove those styles in print;
+  chrome will repeat the header otherwise if you've already
+  scrolled the page before printing */
+  .is-sticky #top-bar{
+    position: inherit !important; /* IE11 doesn't know "initial" here */
+    width: inherit !important;
+    box-shadow: initial;
+  }
 }
