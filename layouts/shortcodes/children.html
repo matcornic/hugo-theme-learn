@@ -1,8 +1,18 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-{{ $showhidden := .Get "showhidden"}}
+{{ .Scratch.Set "description" (.Get "description") }}
+{{ .Scratch.Set "showhidden" (.Get "showhidden") }}
+{{/* Treat the values of "description" and "showhidden" as true */}}
+{{/* only when "true" is specified */}}
+{{ if ne (.Scratch.Get "showhidden") "true" }}
+	{{ .Scratch.Set "showhidden" false }}
+{{ end }}
+{{ if ne (.Scratch.Get "description") "true" }}
+	{{ .Scratch.Set "description" false }}
+{{ end }}
+{{ $showhidden := .Scratch.Get "showhidden" }}
+{{ $withDescription := .Scratch.Get "description" }}
 {{ $style :=  .Get "style" | default "li" }}
 {{ $depth :=  .Get "depth" | default 1 }}
-{{ $withDescription :=  .Get "description" | default false }}
 {{ $sortTerm :=  .Get "sort" | default "Weight" }}
 
 <ul class="children children-{{$style}}">
