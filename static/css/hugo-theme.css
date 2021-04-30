@@ -18,6 +18,8 @@
 
 #TableOfContents > ul > li > a {
   font-weight: bold;
+  padding: 0 36px;
+  margin: 0 2px;
 }
 
 body {
