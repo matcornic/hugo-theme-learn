@@ -12,7 +12,7 @@ Merci à eux <i class="fas fa-heart"></i> de rendre le monde Open Source meilleu
 Et un grand merci à [@vjeantet](https://github.com/vjeantet) pour son travail sur [docdock](https://github.com/vjeantet/hugo-theme-docdock), un fork de _hugo-theme-learn_. La v2.0.0 du thème est en grande partie inspirée de son travail.
 
 ## Packages et librairies
-* [mermaid](https://knsv.github.io/mermaid) - géneration de diagrames et graphiques à partir de texte similaire à Markdown
+* [mermaid](https://mermaid-js.github.io/) - géneration de diagrames et graphiques à partir de texte similaire à Markdown
 * [font awesome](http://fontawesome.io/) - Le framework de polices iconiques
 * [jQuery](https://jquery.com) - La plus connue des librairies Javascript
 * [lunr](https://lunrjs.com) - Lunr fournit des fonctions de recherche sans service externe
