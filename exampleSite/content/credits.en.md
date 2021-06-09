@@ -12,7 +12,7 @@ Thanks to them <i class="fas fa-heart"></i> for making Open Source Software a be
 And a special thanks to [@vjeantet](https://github.com/vjeantet) for his work on [docdock](https://github.com/vjeantet/hugo-theme-docdock), a fork of hugo-theme-learn. v2.0.0 of this theme is inspired by his work.
 
 ## Packages and libraries
-* [mermaid](https://knsv.github.io/mermaid) - generation of diagram and flowchart from text in a similar manner as markdown
+* [mermaid](https://mermaid-js.github.io/) - generation of diagram and flowchart from text in a similar manner as markdown
 * [font awesome](http://fontawesome.io/) - the iconic font and CSS framework
 * [jQuery](https://jquery.com) - The Write Less, Do More, JavaScript Library
 * [lunr](https://lunrjs.com) - Lunr enables you to provide a great search experience without the need for external, server-side, search services...
