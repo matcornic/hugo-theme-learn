@@ -67,9 +67,9 @@
     <script src="{{"js/learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
     <script src="{{"js/hugo-learn.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
     {{ if (or (and (ne .Params.disableMermaid nil) (not .Params.disableMermaid)) (not .Site.Params.disableMermaid)) }}
-        {{ if isset .Params "customMermaidURL" }}
+        {{ if isset .Params "custommermaidurl" }}
             <script src="{{ .Params.customMermaidURL }}"></script>
-        {{ else if isset .Site.Params "customMermaidURL" }}
+        {{ else if isset .Site.Params "custommermaidurl" }}
             <script src="{{ .Site.Params.customMermaidURL }}"></script>
         {{ else }}
             <script src="{{"mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
