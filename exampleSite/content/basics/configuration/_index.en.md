@@ -107,6 +107,6 @@ landingPageURL = "/"
 landingPageName = "<i class='fas fa-home'></i> Home"
 ```
 
-The home button is going to looks like this:
+The home button is going to look like this:
 
 ![Default Home Button](/en/basics/configuration/images/home_button_defaults.jpg?width=100%)
