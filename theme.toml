@@ -3,19 +3,19 @@
 
 name = "Learn"
 license = "MIT"
-licenselink = "https://github.com/matcornic/hugo-theme-learn/blob/master/LICENSE.md"
-description = "Documentation theme for Hugo, based on Grav Learn theme"
-homepage = "https://github.com/matcornic/hugo-theme-learn/"
-repo = "https://github.com/matcornic/hugo-theme-learn"
+licenselink = "https://github.com/LaunchCodeTechnicalTraining/hugo-theme-learn/blob/master/LICENSE.md"
+description = "Documentation theme for LaunchCode curriculum development adpated from Learn by Mathieu Cornic."
+homepage = "https://launchcode.org"
+repo = "https://github.com/LaunchCodeTechnicalTraining/hugo-theme-learn"
 tags = ["documentation", "grav", "learn", "doc", "search"]
 features = ["documentation", "menu", "nested sections", "search", "mermaid"]
 min_version = 0.25
 
 [author]
-  name = "Mathieu Cornic"
-  homepage = "https://matcornic.github.io/"
+  name = "Paul Matthews"
+  homepage = "https://launchcode.org"
 
 [original]
-  name = "Grav Learn"
-  homepage = "https://learn.getgrav.org/"
+  name = "Mathieu Cornic"
+  homepage = "https://matcornic.github.io/"
   repo = "https://github.com/getgrav/grav-learn"
