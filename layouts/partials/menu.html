@@ -112,8 +112,7 @@
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
         {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
         ">
-      {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne"
-      true ))) }}
+      {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
       {{ if and .Site.Params.CollapsibleMenu (ne $numberOfPages 0) }}
       <input type="checkbox" id="section-{{ md5 .Page }}" class="toggle" {{ if .IsAncestor $currentNode }}checked{{ end }} />
       <label for="section-{{ md5 .Page }}" class="flex justify-between"></label>
