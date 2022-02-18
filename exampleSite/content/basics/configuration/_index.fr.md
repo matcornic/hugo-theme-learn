@@ -46,6 +46,8 @@ Notez que certains de ces paramètres sont expliqués en détails dans d'autres 
   themeVariant = ""
   # Fournissez une liste de fichiers css personnalisés à charger par rapport depuis le dossier `static/` à la racine du site.
   custom_css = ["css/foo.css", "css/bar.css"]
+  # S'il est défini sur true, le menu de la barre latérale sera affiché dans une arborescence pliable.
+  collapsibleMenu = false
 ```
 
 ## Activer la recherche {#activer-recherche}

@@ -1141,3 +1141,134 @@ pre .copy-to-clipboard:hover {
 option {
     color: initial;
 }
+
+#sidebar ul.collapsible-menu li a {
+    display: inline-block;
+}
+
+#sidebar ul.collapsible-menu {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#sidebar .collapsible-menu {
+    transition: .2s ease-in-out;
+    transition-property: transform, margin, opacity, visibility;
+    will-change:transform, margin, opacity;
+
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+#sidebar ul li.active > a {
+    color: #ccc;
+}
+
+#sidebar .collapsible-menu input.toggle {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	cursor: pointer;
+    overflow: hidden;
+    position:absolute
+}
+
+#sidebar .collapsible-menu li {
+    position: relative;
+    user-select: none;
+}
+
+#sidebar .collapsible-menu label {
+    cursor: pointer;
+    word-wrap: break-word;
+	display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#sidebar .collapsible-menu a {
+    color: #ccc;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+#sidebar .collapsible-menu input.toggle+label+a+ul {
+    overflow: hidden !important;
+    display: none !important;
+}
+
+#sidebar .collapsible-menu input.toggle:checked+label+a+ul {
+	display: inline !important;
+}
+
+#sidebar .collapsible-menu input.toggle:checked+label+a+ul > li {
+	display: block !important;
+}
+
+#sidebar .collapsible-menu input.toggle:checked+label+a+ul {
+	height: auto;
+    display: inline;
+}
+
+#sidebar .collapsible-menu input.toggle+label:after {
+    width: 1rem;
+    height: 1rem;
+    content: "▸";
+    color: #ccc;
+}
+
+#sidebar .collapsible-menu input.toggle:checked+label:after {
+    width: 1rem;
+    height: 1rem;
+    content: "▾";
+    color: #ccc;
+}
+
+#sidebar ul.collapsible-menu li.active > a {
+    margin-left: 0;
+    padding-left: 0.5rem;
+    width: calc(100% - 2.4rem);
+}
+
+#sidebar ul.collapsible-menu > li.active > a, #sidebar ul.collapsible-menu > li > a {
+    margin-left: 0;
+    padding-left: 0.25rem;
+    width: calc(100% - 2rem) !important;
+    padding-right: 0;
+}
+
+#sidebar ul.collapsible-menu > li.parent, #sidebar ul.collapsible-menu > li.active {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#sidebar ul.collapsible-menu li > a {
+    width: calc(100% - 2.4rem);
+    left: 3rem;
+    margin-right: 0;
+}
+
+#sidebar ul.collapsible-menu li input:checked a {
+    padding-left: 0;
+}
+
+#sidebar ul.collapsible-menu ul > li > input:checked+label+a {
+    display: inline-block;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#sidebar ul.collapsible-menu ul > li > input:checked+label+a > li > a:nth-child(1):nth-last-child(1){
+    margin-left: 2rem;
+}
+
+#sidebar ul.collapsible-menu li > a:nth-child(1):nth-last-child(1)  {
+    margin-left: 2rem;
+    width: calc(100% - 2.25rem);
+    padding-left: 0;
+    padding-right: 0;
+}

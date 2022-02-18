@@ -21,7 +21,7 @@
   {{end}}
 
     <div class="highlightable">
-    <ul class="topics">
+    <ul class="topics{{ if .Site.Params.CollapsibleMenu }} collapsible-menu{{ end }}">
 
         {{if eq .Site.Params.ordersectionsby "title"}}
           {{range .Site.Home.Sections.ByTitle}}
@@ -104,22 +104,27 @@
 {{ $showvisitedlinks := .showvisitedlinks }}
 {{ $currentNode := .currentnode }}
 {{ $currentFileUniqueID := "" }}
+{{ $ancestor := .Page.IsAncestor .CurrentPage }}
 {{ with $currentNode.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }}
  {{with .sect}}
   {{if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{safeHTML .Params.head}}
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
-        {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
-        {{if .Params.alwaysopen}}parent{{end}}
         ">
+      {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne"
+      true ))) }}
+      {{ if and .Site.Params.CollapsibleMenu (ne $numberOfPages 0) }}
+      <input type="checkbox" id="section-{{ md5 .Page }}" class="toggle" {{ if .IsAncestor $currentNode }}checked{{ end }} />
+      <label for="section-{{ md5 .Page }}" class="flex justify-between"></label>
+      {{ end }}
+
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
             <i class="fas fa-check read-icon"></i>
           {{ end }}
       </a>
-      {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
       {{ if ne $numberOfPages 0 }}
         <ul>
           {{ $currentNode.Scratch.Set "pages" .Pages }}

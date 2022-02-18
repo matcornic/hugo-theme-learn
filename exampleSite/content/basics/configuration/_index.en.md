@@ -52,6 +52,8 @@ Note that some of these parameters are explained in details in other sections of
   custom_css = ["css/foo.css", "css/bar.css"]
   # Change the title separator. Default to "::".
   titleSeparator = "-"
+  # If set to true, the menu in the sidebar will be displayed in a collapsible tree view.
+  collapsibleMenu = false
 ```
 
 ## Activate search

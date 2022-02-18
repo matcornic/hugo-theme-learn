@@ -126,3 +126,11 @@ a:hover {
 #homelinks a:hover {
   color: var(--MENU-HOME-LINK-HOVERED-color);
 }
+
+#sidebar .collapsible-menu input.toggle+label:after {
+    color: var(--MENU-SECTIONS-LINK-color);
+}
+
+#sidebar .collapsible-menu input.toggle:checked+label:after {
+    color: var(--MENU-SECTIONS-LINK-color);
+}
