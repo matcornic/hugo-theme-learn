@@ -1,0 +1,93 @@
+<iframe id="slideFrame" src="{{"none.html" | relURL }}" style="width:{{with .Get "width"}}{{.}}{{else}}100%{{end}};height:{{with .Get "height"}}{{.}}{{else}}40em{{end}}; border:0px"></iframe>
+
+
+<a  href="fullscreen/" target="_blank">
+   <i class="fas fa-expand-arrows-alt fa-1x"> Fullscreen</i>
+</a>
+
+<div id="slideContent">
+	
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.1.0/dist/reset.css">
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.1.0/dist/reveal.css">
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.1.0/dist/theme/{{with .Get "theme"}}{{.|safeHTML}}{{else}}black{{end}}.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.1.0/plugin/highlight/monokai.css" id="highlight-theme">
+
+		<!-- TODO: link to custom styles override or use embedded style? -->
+
+<style>
+  .reveal .slides ol,
+  .reveal .slides dl,
+  .reveal .slides ul {
+    display: block !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  .reveal .slides h1, h2 {
+    margin-top: 0 !important;
+  }
+
+  .reveal blockquote {
+    margin: 5% auto;
+    width: 100%
+  }
+
+  .reveal .slides table {
+    color: inherit;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .reveal .slides pre {
+    width: 100%;
+  }
+  a {
+    color: white;
+  }
+</style>
+
+	<div class="reveal">
+    <div class="slides">
+      <section data-markdown
+                data-separator="^---"
+            data-separator-vertical="^___"
+            data-separator-notes="^Notes:"
+            data-charset="utf8">
+            {{ .Inner | safeHTML}}
+          </section>
+        </div>
+      </div>
+      
+      
+      <script async src="https://unpkg.com/reveal.js@4.1.0/dist/reveal.js"></script>
+	<script async src="https://unpkg.com/reveal.js@4.1.0/plugin/notes/notes.js"></script>
+	<script async src="https://unpkg.com/reveal.js@4.1.0/plugin/markdown/markdown.js"></script>
+	<script async src="https://unpkg.com/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+  
+	<script>
+    function initSlides() {
+      Reveal.initialize({
+        controls : {{with .Get "controls"}}{{.|safeHTML}}{{else}}true{{end}}, 
+        center: {{with .Get "center"}}{{.|safeHTML}}{{else}}true{{end}} ,		
+        history: {{with .Get "history"}}{{.|safeHTML}}{{else}}false{{end}} ,
+        progress: {{with .Get "progress"}}{{.|safeHTML}}{{else}}true{{end}} ,
+        transition: {{with .Get "transition"}}{{.}}{{else}}"concave"{{end}},
+        
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],        
+        
+      });
+    }
+	</script>
+</div>
+
+<script type="text/javascript">
+var toto = document.getElementById('slideContent').innerHTML
+document.getElementById('slideFrame').contentWindow.document.write(document.getElementById('slideContent').innerHTML); 
+document.getElementById('slideContent').remove();
+document.addEventListener("DOMContentLoaded",function(){
+	  setTimeout(function () {
+      document.getElementById('slideFrame').contentWindow.initSlides() ;
+    }, 2000);
+});
+</script>
