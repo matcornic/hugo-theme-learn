@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reset.css">
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+    <link href="{{"css/atom-one-dark-reasonable.css" | relURL}}" rel="stylesheet">
+    <!-- use default hugo themes for consistency -->
+    <link href="{{"css/theme.css" | relURL}}" rel="stylesheet">
+    <link href="{{"css/hugo-theme.css" | relURL}}" rel="stylesheet">
+    <!-- override for slide specific theming -->
+    <link href="{{"css/slides.css" | relURL}}" rel="stylesheet">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown
+				         data-separator="^---"
+					 data-separator-vertical="^___"
+           data-separator-notes="^Notes:">
+				{{ .RawContent }}
+				</section>
+			</div>
+		</div>	
+
+		<script src="https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"></script>
+		<script src="https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+		<script src="https://unpkg.com/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+		<script src="https://unpkg.com/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+
+		<script>
+			Reveal.initialize({
+          plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+          // options: https://revealjs.com/config/
+          hash: true,
+          respondToHashChanges: true,
+          overview: true,
+          controlsTutorial: true,
+          width: "90%",
+          height: "90%",
+          margin: 0.1
+      });
+		</script>
+	</body>
+</html>
