@@ -1,6 +1,6 @@
 baseURL = "https://example.org" # UPDATE TO LIVE SITE LINK (or let ci/cd handle it)
 languageCode = "en-us"
-title = "Linux Introduction" # UPDATE TO PROGRAM NAME
+title = "EXAMPLE PROJECT" # UPDATE TO PROGRAM NAME
 theme = "lc-learn"
 
 [params]
