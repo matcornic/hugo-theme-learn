@@ -1,0 +1,42 @@
+{
+	"LC Learn Picture": {
+		"scope": "markdown,md",
+		"prefix": "//picture",
+		"body": ["![${1:alt-text}](pictures/${2:path}.png?classes=border)$0"]
+	},
+	"LC Learn Resize Picture": {
+		"scope": "markdown,md",
+		"prefix": "//resize-picture",
+		"body": ["![${1:alt-text}](pictures/${2:path}.png?classes=border&height=650px)$0"]
+	},
+	"LC Learn Notice": {
+		"scope": "markdown,md",
+		"prefix": "//notice",
+		"body": ["{{% notice ${1:note} %}}", "$2", "{{% /notice %}}$0"]
+	},
+	"LC Learn Normal Expand": {
+		"scope": "markdown,md",
+		"prefix": "//expand",
+		"body": ["{{% expand \"${1:title}\" %}}", "$2", "{{% /expand %}}"]
+	},
+	"LC Learn Answer Expand": {
+		"scope": "markdown,md",
+		"prefix": "//answer",
+		"body": ["{{% expand \"${1:CLICK FOR ANSWER}\" %}}", "$2", "{{% /expand %}}"]
+	},
+	"LC Learn TODO": {
+		"scope": "markdown,md",
+		"prefix": "//todo",
+		"body": ["<!-- TODO: ${1:example TODO item here} -->$0"]
+	},
+	"LC Learn Clarity": {
+		"scope": "markdown,md",
+		"prefix": "//clarity",
+		"body": ["<!-- CLARITY: ${1:example clarification review request} -->$0"]
+	},
+	"LC Learn Accuaracy": {
+		"scope": "markdown,md",
+		"prefix": "//accuracy",
+		"body": ["<!-- ACCURACY: ${1:example accuracy review request} -->$0"]
+	}
+}
