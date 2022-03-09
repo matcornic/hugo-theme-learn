@@ -21,15 +21,33 @@ So at the root of your project you would have:
 
 After committing these files in the `.github/ISSUE_TEMPLATE/` directory you can view a representation of the rendered forms directly on GitHub:
 
+#### Example Pictures
+
+Bug Form rendering on GitHub:
+
 ![GH Bug Form](pictures/bug.png)
 
+Clarity Request rendering on GitHub:
+
 ![GH Clarity Request Form](pictures/clarity-request.png)
+
+Feature Request Form rendering on GitHub:
 
 ![GH Feature Request Form](pictures/feature-request.png)
 
 ### GitHub Configuration
 
+<!-- TODO: determine if there is any configuration necessary after installing the templates into the correct location.
+
+If so write a little blurb about the work necessary. Include pictures.
+
+If not remove this section completely.
+
+-->
+
 ### Issue Creation Experience
+
+<!-- TODO: create a little blurb, with pictures explaining how general population can use these forms to generate meaningful issues. -->
 
 ## New Issue Templates
 
