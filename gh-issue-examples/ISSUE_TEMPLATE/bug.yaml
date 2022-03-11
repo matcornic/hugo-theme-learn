@@ -1,0 +1,49 @@
+---
+name: Bug
+description: Provide information around the nature of the encountered bug.
+body:
+- type: markdown
+  attributes:
+    value: "# Bug Form"
+- type: markdown
+  attributes:
+    value: |
+      A **bug** is an error in the curriculum. In other words some aspect of the web page did not behave the way it should. Examples include, but not limited to:
+      - broken link
+      - missing image
+      - broken button
+      - provided code that doesn't execute on your machine
+- type: markdown
+  attributes:
+    value: |
+      Please provide information around the nature of the bug you encountered by filling out the remainder of this form. The more information you provide us, the more likely we will be able to resolve the issue.
+- type: textarea
+  attributes:
+    label: "URL: Path to Bug"
+    placeholder: "Examples: contributing/edit-page/"
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Nature of Bug
+    placeholder: "Examples: link with text 'Click here to learn more' is broken; button with text 'Click for Answer' is broken; code block contains code that doesn't run"
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: More information
+    placeholder: "Example: please provide any additional relevant information including the expected behavior the bug may be inhibiting."
+- type: markdown
+  attributes:
+    value: "# Thank You"
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to help us in improving this course. You rock!
+- type: markdown
+  attributes:
+    value: "### Disclaimer"
+- type: markdown
+  attributes:
+    value: |
+      We value all the input received from our students, course staff, and allies of LaunchCode. However, all issues will be considered by LaunchCode staff before issue resolution. LaunchCode reserves the final say on bug fixes, clarity improvements, and new features. We offer no guarantee that any issues will result in changes to the curriculum.
