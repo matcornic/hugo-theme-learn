@@ -1,0 +1,53 @@
+---
+name: Clarity Request
+description: Provide information around the nature of confusing text in the project.
+body:
+- type: markdown
+  attributes:
+    value: "# Clarity Request Form"
+- type: markdown
+  attributes:
+    value: |
+      A **clarity request** is a request to the maintainers of the project to improve the clarity of a specific section, paragraph, sentence, or phrase. 
+      
+      As you are working through this program you may find some written content to be confusing. Learning is hard, and we encourage everyone to read confusing passages multiple times. We do our best to achieve a high level of clarity in all of our curriculum.
+      
+      However, in some instances, there may be an improvement we can make to improve the overall clarity of a section. In this case please create a new issue, by filling out this form.
+- type: markdown
+  attributes:
+    value: |
+      Please provide information around the section of curriculum that you believe could be clarified. The more information you provide us, the more likely we will be able to resolve the issue.
+- type: textarea
+  attributes:
+    label: "URL: Path to Bug"
+    placeholder: "Examples: contributing/edit-page/"
+  validations:
+      required: true
+- type: textarea
+  attributes:
+    label: Confusing Section
+    placeholder: "Examples: Under the Edit Page Header, the first paragraph reads: On the page where you have seen a typo, click the Edit this Page button found in the breadcrumb menu in the top right hand corner of your screen. It looks like the following picture:"
+  validations:
+      required: true
+- type: textarea
+  attributes:
+    label: Suggestions
+    placeholder: "Examples: On the page where you have seen a typo, click the Edit this Page button found in the breadcrumb menu in the top right hand corner of your screen. A breadcrumb is a visual navigation tool to help users understand their place within the project. It looks like the following picture:"
+- type: textarea
+  attributes:
+    label: Additional information
+    placeholder: "Examples: The curriculum never explained what a breadcrumb is, but uses the terminology like we should know. The definition needs to be included, or the term needs to be removed."
+- type: markdown
+  attributes:
+    value: "# Thank You"
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to help us in improving this course. You rock!
+- type: markdown
+  attributes:
+    value: "### Disclaimer"
+- type: markdown
+  attributes:
+    value: |
+      We value all the input received from our students, course staff, and allies of LaunchCode. However, all issues will be considered by LaunchCode staff before issue resolution. LaunchCode reserves the final say on bug fixes, clarity improvements, and new features. We offer no guarantee that any issues will result in changes to the curriculum.

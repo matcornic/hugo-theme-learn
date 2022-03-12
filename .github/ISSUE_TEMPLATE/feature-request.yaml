@@ -1,0 +1,48 @@
+---
+name: Feature Request
+description: Please let us know what feature should be added.
+body:
+- type: markdown
+  attributes:
+    value: "# Feature Request Form"
+- type: markdown
+  attributes:
+    value: |
+      A **feature request** is a request to the maintainers of the project to add a **new** feature. Examples of new features include, but not limited to:
+      - more executable examples
+      - more interactive questions and answers 
+      - more activities
+      - additions to examples or activities
+      - new features that could be added to the entire site
+- type: markdown
+  attributes:
+    value: |
+      Please provide information around the nature of the requested feature by filling out the remainder of this form. The more information you provide us, the more likely we will be able to resolve the issue.
+- type: textarea
+  attributes:
+    label: Feature Short Description
+    placeholder: "Examples: Git rebase example."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Feature Long Description
+    placeholder: "Examples: The Git chapter mentioned git rebase as a viable merge strategy, however there were no examples on performing a git rebase."
+- type: textarea
+  attributes:
+    label: Where Should the Feature Be added
+    placeholder: "The example should be added as a new section after the git merge section. It could be titled git rebase."
+- type: markdown
+  attributes:
+    value: "# Thank You"
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to help us in improving this course. You rock!
+- type: markdown
+  attributes:
+    value: "### Disclaimer"
+- type: markdown
+  attributes:
+    value: |
+      We value all the input received from our students, course staff, and allies of LaunchCode. However, all issues will be considered by LaunchCode staff before issue resolution. LaunchCode reserves the final say on bug fixes, clarity improvements, and new features. We offer no guarantee that any issues will result in changes to the curriculum.
