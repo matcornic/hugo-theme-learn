@@ -2,11 +2,16 @@
 title: "Slides: Fullscreen"
 date: {{ .Date }}
 draft: false
+hidden: true
 type: "slides"
 weight: 1
-reviewer: "" # to be set by the approving reviewer
-last_editor: "" # update each time the file is edited
-last_edit_date: # just the date is enough (don't worry about the time portion)
+originalAuthor: # to be set by page creator
+originalAuthorGitHub: # to be set by page creator
+reviewer: # to be set by the page reviewer
+reviewerGitHub: # to be set by the page reviewer
+lastEditor: # update any time edits are made after review
+lastEditorGitHub: # update any time edits are made after review
+lastMod: # UPDATE ANY TIME CHANGES ARE MADE
 ---
 
 <!-- Copy everything between open and closing slide tags from _index.md -->
