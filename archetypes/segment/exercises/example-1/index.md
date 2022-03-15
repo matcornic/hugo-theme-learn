@@ -3,8 +3,8 @@ title: "Exercise Example 1"
 date: {{ .Date }}
 draft: false
 weight: 1
-originalAuthor: # to be set by page creator
-originalAuthorGitHub: # to be set by page creator
+originalAuthor: {{ .Site.Data.contributors.contributor.name }} # to be set by page creator
+originalAuthorGitHub: {{ .Site.Data.contributors.contributor.github }} # to be set by page creator
 reviewer: # to be set by the page reviewer
 reviewerGitHub: # to be set by the page reviewer
 lastEditor: # update any time edits are made after review
