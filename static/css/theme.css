@@ -536,8 +536,8 @@ div.notices.tip p:first-child:after {
     content: 'Tip';
 }
 div.notices.bonus p {
-    border-top: 30px solid rgba(92, 184, 92, 0.8);
-    background: #E6F9E6;
+    border-top: 30px solid #F47753;
+    background: #fff4f0;
 }
 div.notices.bonus p:first-child:after {
     content: 'Bonus';
