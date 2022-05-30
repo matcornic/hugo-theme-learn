@@ -95,3 +95,16 @@ Somewhat work-in-progress steps to release with [gren](https://github.com/github
   ```shell
   gren release -t <tag>
   ```
+  
+
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
