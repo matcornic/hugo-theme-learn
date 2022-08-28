@@ -61,7 +61,7 @@
                   {{ end }}
                 {{ end }}
                 {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <div id="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
                     <span id="sidebar-toggle-span">
                         <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
                           <i class="fas fa-bars"></i>
@@ -73,7 +73,35 @@
                   <span class="links">
                  {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
                  {{if $showBreadcrumb}}
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}
+                   {{/*  build the breadcrumbs slice  */}}
+                   {{ $data := newScratch}}
+                   {{ $data.Set "breadcrumbs" slice}}
+                   {{ template "breadcrumb" dict "page" . "value" .Title "data" $data }}
+
+                   {{/*  start output breadcrumbs slice  */}}
+                   {{ range $index, $breadcrumb := $data.Get "breadcrumbs"}}
+                     {{ $currentIndex := add $index 1 }}
+
+                     {{ if eq $breadcrumb.URL $.RelPermalink }}
+                       {{ if ne $.Title "" }}
+                         <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                           <span itemprop="name">{{ $breadcrumb.title }}</span>
+                           <meta itemprop="position" content="{{ $currentIndex }}" />
+                         </span>
+                       {{ end }}
+                     {{ else }}
+                       <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                         <a itemprop="item" href="{{ $breadcrumb.URL }}">
+                           <span itemprop="name">{{ $breadcrumb.title}}</span>
+                         </a>
+                         <meta itemprop="position" content="{{ $currentIndex }}" />
+                       </span>
+                       {{ if or (lt $currentIndex (sub (len ($data.Get "breadcrumbs")) 1 )) (ne $.Title "")}}
+                         <span class="separator"> > </span>
+                       {{ end }}
+                     {{ end }}
+                     {{/*  end output breadcrumbs slice  */}}
+                   {{ end }}
                  {{ else }}
                    {{ .Title }}
                  {{ end }}
@@ -103,10 +131,19 @@
 
         {{define "breadcrumb"}}
           {{$parent := .page.Parent }}
+          {{ $breadcrumbs := .data.Get "breadcrumbs" }}
+
           {{ if $parent }}
-            {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.RelPermalink $parent.Title .value) }}
-            {{ template "breadcrumb" dict "page" $parent "value" $value }}
+            {{ $currentBreadcrumb := slice (dict "title" .page.Title "URL" .page.RelPermalink) }}
+            {{ $breadcrumbs = append $breadcrumbs $currentBreadcrumb }}
+            {{ .data.Set "breadcrumbs" $breadcrumbs }}
+
+            {{ template "breadcrumb" dict "page" $parent "data" .data }}
           {{else}}
-            {{.value|safeHTML}}
+            {{ $currentBreadcrumb := slice (dict "title" .page.Title "URL" .page.RelPermalink)}}
+            {{ $breadcrumbs = append $breadcrumbs $currentBreadcrumb}}
+    
+            {{ .data.Set "breadcrumbs" $breadcrumbs }}
           {{end}}
         {{end}}
+
