@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Hugo Learn Documentation"
+title = "Hyperproof Help Center"
 theme = "hugo-theme-learn"
 themesdir = "../.."
 metaDataFormat = "yaml"
@@ -10,8 +10,8 @@ defaultContentLanguageInSubdir= true
 
 [params]
   editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
-  description = "Documentation for Hugo Learn Theme"
-  author = "Mathieu Cornic"
+  description = "Hyperproof Learning Resources"
+  author = "Hyperproof"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
