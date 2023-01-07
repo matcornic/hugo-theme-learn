@@ -1,0 +1,35 @@
+[Search-placeholder]
+other = "Cerca..."
+
+[Clear-History]
+other = "Cancella cronologia"
+
+[Attachments-label]
+other = "Allegati"
+
+[title-404]
+other = "Errore"
+
+[message-404]
+other = "Ops. Sembra che questa pagina non esista ¯\\_(ツ)_/¯."
+
+[Go-to-homepage]
+other = "Vai alla pagina principale"
+
+[Edit-this-page]
+other = "Modifica questa pagina"
+
+[Shortcuts-Title]
+other = "Altro"
+
+[Expand-title]
+other = "Espandimi..."
+
+[Byte-symbol]
+other = "B"
+
+[Kilobyte-symbol]
+other = "KB"
+
+[Megabyte-symbol]
+other = "MB"
