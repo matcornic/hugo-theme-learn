@@ -86,13 +86,13 @@ on the left menu. It is an alternative for clicking on the logo. To edit the
 appearance, you will have to configure two parameters for the defined languages:
 
 ```toml
-[Lanugages]
-[Lanugages.en]
+[Languages]
+[Languages.en]
 ...
 landingPageURL = "/en"
 landingPageName = "<i class='fas fa-home'></i> Redirect to Home"
 ...
-[Lanugages.fr]
+[Languages.fr]
 ...
 landingPageURL = "/fr"
 landingPageName = "<i class='fas fa-home'></i> Accueil"
