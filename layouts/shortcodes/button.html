@@ -1,5 +1,5 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<a {{ with .Get "href"}} href="{{.}}" target="_blank" {{ end }} class="btn btn-default">
+<a {{ with .Get "href"}} href="{{.}}" target="_blank" rel="noopener noreferrer" {{ end }} class="btn btn-default">
   {{ $icon := .Get "icon" }}
   {{ $iconposition := .Get "icon-position" }}
   {{ if ($icon) }}
