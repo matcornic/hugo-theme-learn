@@ -61,7 +61,7 @@
                   {{ end }}
                 {{ end }}
                 {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <div id="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                     <span id="sidebar-toggle-span">
                         <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
                           <i class="fas fa-bars"></i>
@@ -73,7 +73,9 @@
                   <span class="links">
                  {{$showBreadcrumb := (and (not .Params.disableBreadcrumb) (not .Site.Params.disableBreadcrumb))}}
                  {{if $showBreadcrumb}}
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}
+                    {{ .Scratch.Set "depth" 1 }}
+                    {{ template "computeBreadcrumbDepth" dict "origPage" . "page" . }}
+                    {{ template "breadcrumb" dict "origPage" . "page" . "value" .Title "position" 1 }}
                  {{ else }}
                    {{ .Title }}
                  {{ end }}
@@ -101,11 +103,20 @@
             </h1>
           {{end}}
 
+        {{define "computeBreadcrumbDepth"}}
+          {{$scratch := .origPage.Scratch }}
+          {{$parent := .page.Parent }}
+          {{ if $parent }}
+            {{ $scratch.Set "depth" (add ($scratch.Get "depth") 1) }}
+            {{ template "computeBreadcrumbDepth" dict "origPage" .origPage "page" $parent }}
+          {{end}}
+        {{end}}
+
         {{define "breadcrumb"}}
           {{$parent := .page.Parent }}
           {{ if $parent }}
-            {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.RelPermalink $parent.Title .value) }}
-            {{ template "breadcrumb" dict "page" $parent "value" $value }}
+            {{ $value := (printf "<span itemscope='' itemprop='itemListElement' itemtype='http://schema.org/ListItem'><a itemprop='item' href='%s'> <span itemprop='name'>%s</span><meta itemprop='position' content='%d' /></a></span> > %s" $parent.RelPermalink $parent.Title (sub (.origPage.Scratch.Get "depth") .position) .value ) }}
+            {{ template "breadcrumb" dict "origPage" .origPage "page" $parent "value" $value "position" (add .position 1) }}
           {{else}}
             {{.value|safeHTML}}
           {{end}}
