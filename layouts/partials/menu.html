@@ -58,21 +58,14 @@
             <i class="fas fa-language fa-fw"></i>
           <div class="select-style">
             <select id="select-language" onchange="location = this.value;">
-          {{ $siteLanguages := .Site.Languages}}
-          {{ $pageLang := .Page.Lang}}
-          {{ range .Page.AllTranslations }}
-              {{ $translation := .}}
-              {{ range $siteLanguages }}
-                  {{ if eq $translation.Lang .Lang }}
-                    {{ $selected := false }}
-                    {{ if eq $pageLang .Lang}}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}</option>
-                    {{ else }}
-                      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
-                    {{ end }}
-                  {{ end }}
+              {{ $pageLang := .Page.Lang }}
+              {{ range .AllTranslations }}
+                {{ if eq $pageLang .Lang }}
+                  <option id="{{ .Language }}" value="{{ .Permalink }}" selected>{{ .Language.LanguageName }}</option>
+                {{ else }}
+                  <option id="{{ .Language }}" value="{{ .Permalink }}">{{ .Language.LanguageName }}</option>
+                {{ end }}
               {{ end }}
-          {{ end }}
         </select>
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
