@@ -18,6 +18,7 @@ defaultContentLanguageInSubdir= true
   disableLandingPageButton = true
   disableMermaid = false
   customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+  disableMathJax = false
   titleSeparator = "::"
 
 [outputs]
