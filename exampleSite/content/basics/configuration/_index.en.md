@@ -24,6 +24,10 @@ Note that some of these parameters are explained in details in other sections of
   showVisitedLinks = false
   # Disable search function. It will hide search bar
   disableSearch = false
+  # By default, the menu will show the entire tree for the current site.
+  # For sites with many subsites and pages, setting this option to true will
+  # limit the menu to the current page, its ancestors, and their children.
+  hideExtendedTree = false
   # Javascript and CSS cache are automatically busted when new version of site is generated.
   # Set this to true to disable this behavior (some proxies don't handle well this optimization)
   disableAssetsBusting = false

@@ -24,6 +24,10 @@ Notez que certains de ces paramètres sont expliqués en détails dans d'autres 
   showVisitedLinks = false
   # Désactive la fonction de recherche. Une valeur à true cache la barre de recherche.
   disableSearch = false
+  # Par défaut, le menu affichera l'intégralité de l'arborescence du site actuel.
+  # Pour les sites comportant de nombreux sous-sites et pages, définir cette option 
+  # sur true limitera le menu à la page actuelle, à ses ancêtres et à leurs enfants.
+  hideExtendedTree = false
   # Par défaut, le cache Javascript et CSS est automatiquement vidé lorsqu'une nouvelle version du site est générée.
   # Utilisez ce paramètre lorsque vous voulez désactiver ce comportement (c'est parfois incompatible avec certains proxys)
   disableAssetsBusting = false

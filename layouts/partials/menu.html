@@ -119,8 +119,9 @@
             <i class="fas fa-check read-icon"></i>
           {{ end }}
       </a>
-      {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
-      {{ if ne $numberOfPages 0 }}
+      {{ if or (not .Site.Params.hideExtendedTree) (.IsAncestor $currentNode) (eq .File.UniqueID $currentFileUniqueID) }}
+       {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
+       {{ if ne $numberOfPages 0 }}
         <ul>
           {{ $currentNode.Scratch.Set "pages" .Pages }}
           {{ if .Sections}}
@@ -144,6 +145,7 @@
           {{ end }}
         {{end}}
         </ul>
+       {{ end }}
       {{ end }}
     </li>
   {{else}}
